@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #010f23;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+::selection {
+  background: #4bc2bc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.highlighted {
+  color: #4bc2bc;
+  font-weight: 800;
+  text-shadow: 0 0 2px #4bc2bc;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #4bc2bc;
+  font-family: 'Sometype Mono', monospace;
+  padding-top: 1rem;
+}
+
+.left-navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.left-navbar .navbar-item {
+  padding: 1rem;
+  color: #4bc2bc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.left-navbar .navbar-item:hover {
+  text-shadow: 0 0 10px #4bc2bc;
+}
+
+.right-navbar {
+  padding-right: 1rem;
+}
+
+.right-navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.navbar-item {
+  padding: 1rem;
+  color: #cdd7f7;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  color: #4bc2bc;
+  text-shadow: 0 0 10px #4bc2bc;
+}
+
+.pdf-button {
+  padding: 1rem;
+  border: solid 2px #4bc2bc;
+  border-radius: 8px;
+  color: #4bc2bc;
+  transition: all 0.3s ease;
+}
+
+.pdf-button:hover {
+  box-shadow: 0 0 10px 0 #4bc2bc;
+  background-color: #4bc2bc;
+  color: #010f23;
+}
