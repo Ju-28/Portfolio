@@ -1,7 +1,25 @@
+::-webkit-scrollbar {
+  width: 30px;
+  padding-right: 3px;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #010f23;
+  margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100vw;
+  background: #4bc2bc;
+  border: 10px solid #010f23;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +27,12 @@ body {
   background-color: #010f23;
   max-width: 1400px;
   margin-inline: auto;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
 
 ::selection {
@@ -26,15 +50,19 @@ a {
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  max-width: 1400px;
+  background-color: #010f23;
   display: flex;
   flex-direction: row;
-  gap: 3rem;
   justify-content: space-between;
   text-align: center;
   margin-bottom: 5rem;
   color: #4bc2bc;
   font-family: 'Sometype Mono', monospace;
   padding-top: 1rem;
+  z-index: 2;
 }
 
 .left-navbar ul {

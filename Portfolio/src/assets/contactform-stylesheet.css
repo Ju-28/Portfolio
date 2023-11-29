@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  padding-block: 15px;
+}
+
+.form-group input:focus {
+    animation: inputPulsating 3s ease-out infinite;
+}
+
+.form-group input {
+  padding: 10px 10px 10px 10px;
+  border: solid 2px #c5c9c9;
+  border-radius: 10px;
+  width: 400px;
+  outline: none;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 500;
+  background-color: #010f23;
+}
+
+.text-area {
+  height: 150px;
+  width: 400px;
+  border: solid 2px #c5c9c9;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 500;
+  background-color: #010f23;
+}
+
+.text-area:focus {
+  border: solid 2px #4bc2bc;
+  box-shadow: 0 0 10px 0 #4bc2bc;
+}
+
+.form-group .submit {
+  padding: 1rem;
+  border: solid 2px #4bc2bc;
+  width: 150px;
+  border-radius: 8px;
+  color: #4bc2bc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Sometype Mono', monospace;
+  background-color: transparent;
+}
+
+.form-group .submit:hover {
+  box-shadow: 0 0 10px 0 #4bc2bc;
+  background-color: #4bc2bc;
+  color: #010f23;
+}
+
+@keyframes inputPulsating {
+  0% {
+    border: solid 2px #4bc2bc;
+    box-shadow: 0 0 8px 0 #4bc2bc;
+  }
+  25% {
+    border: solid 2px #4bc2bc;
+    box-shadow: 0 0 13px 0 #4bc2bc;
+  }
+  50% {
+    border: solid 2px #4bc2bc;
+    box-shadow: 0 0 18px 0 #4bc2bc;
+  }
+  75% {
+    border: solid 2px #4bc2bc;
+    box-shadow: 0 0 13px 0 #4bc2bc;
+  }
+  100% {
+    border: solid 2px #4bc2bc;
+    box-shadow: 0 0 8px 0 #4bc2bc;
+  }
+}
