@@ -6,8 +6,6 @@ import '@/assets/contactform-stylesheet.css';
 
 const pdfPath = import.meta.env.BASE_URL + 'public/downloads/Name_My_CV.pdf';
 
-
-
 </script>
 
 <template>

@@ -51,9 +51,9 @@ a {
 
 .navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   max-width: 1400px;
-  background-color: #010f23;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,7 +62,7 @@ a {
   color: #4bc2bc;
   font-family: 'Sometype Mono', monospace;
   padding-top: 1rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .left-navbar ul {
@@ -99,6 +99,7 @@ a {
   color: #cdd7f7;
   transition: all 0.3s ease;
   cursor: pointer;
+  z-index: 3;
 }
 
 .navbar-item:hover {

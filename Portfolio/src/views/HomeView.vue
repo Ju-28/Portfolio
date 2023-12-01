@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 
 import ContactForm from '@/components/ContactForm.vue'
 
@@ -7,14 +7,34 @@ const bgTextWrapper = ref(null);
 
 const showForm = ref(true)
 
-onMounted(() => {
-  // Triggering a reflow to apply the initial styles before adding the in-view class
-  bgTextWrapper.value.offsetHeight;
+onMounted(async () => {
+  // Wait for the next DOM update using nextTick
+  await nextTick();
 
-  // Add a class to trigger the animation when the component is mounted
-  bgTextWrapper.value.classList.add('in-view');
+  // Check if bgTextWrapper.value is not null before accessing properties
+  if (bgTextWrapper.value) {
+    // Triggering a reflow to apply the initial styles before adding the in-view class
+    bgTextWrapper.value.offsetHeight;
+
+    // Add a class to trigger the animation when the component is mounted
+    bgTextWrapper.value.classList.add('in-view');
+  }
 });
 
+function scrollToTopOrBottom() {
+  setTimeout(() => {
+    const scrollingElement = document.scrollingElement || document.body;
+    const isAtBottom = scrollingElement.scrollTop === scrollingElement.scrollHeight - scrollingElement.clientHeight;
+
+    if (isAtBottom) {
+      // If already at the bottom, scroll to the top
+      scrollingElement.scrollTop = 0;
+    } else {
+      // If not at the bottom, scroll to the bottom
+      scrollingElement.scrollTop = scrollingElement.scrollHeight;
+    }
+  }, 100); // 100 milliseconds
+}
 </script>
 
 <template>
@@ -33,17 +53,13 @@ onMounted(() => {
         imagination and wishes to life.
       </div>
     </div>
-    <div ref="bgTextWrapper" class="bg-text">
-      <section class="bg-text-1">FRONTEND</section>
-      <section class="bg-text-2">BACKEND</section>
-      <section class="bg-text-3">DATA SCIENCE</section>
-    </div>
     <div class="contact-wrapper">
-      <button @click="showForm = !showForm" class="contact-header"
-      :class="{showForm:!showForm}">
-        {{showForm ? 'Lets get in touch! &#9660;' : 'Lets get in touch! &#9650;'}}
-      </button>
-      <ContactForm v-if="!showForm"/>
+      <div @click="showForm = !showForm; scrollToTopOrBottom()" class="contact-header" :class="{ showForm: showForm }">
+        {{ showForm ? 'Lets get in touch! &#9660;' : 'Lets get in touch! &#9650;' }}
+      </div>
+      <ContactForm :class="{ 'formFadeIn': !showForm, 'formFadeOut': showForm }" class="contactForm" ref="contactForm" />
     </div>
+    <div class="bubble-purple"></div>
+    <div class="bubble-yellow"></div>
   </main>
 </template>
