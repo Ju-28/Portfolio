@@ -1,39 +1,41 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue';
 
-import ContactForm from '@/components/ContactForm.vue'
+import ContactForm from '@/components/ContactForm.vue';
 
 const bgTextWrapper = ref(null);
-
-const showForm = ref(true)
+const showForm = ref(true);
+const scrollPosition = ref(0);
 
 onMounted(async () => {
-  // Wait for the next DOM update using nextTick
   await nextTick();
 
-  // Check if bgTextWrapper.value is not null before accessing properties
   if (bgTextWrapper.value) {
-    // Triggering a reflow to apply the initial styles before adding the in-view class
     bgTextWrapper.value.offsetHeight;
-
-    // Add a class to trigger the animation when the component is mounted
     bgTextWrapper.value.classList.add('in-view');
   }
 });
 
-function scrollToTopOrBottom() {
+function scrollToHeight(height) {
   setTimeout(() => {
     const scrollingElement = document.scrollingElement || document.body;
-    const isAtBottom = scrollingElement.scrollTop === scrollingElement.scrollHeight - scrollingElement.clientHeight;
+    scrollingElement.scrollTop = height;
+  }, 100);
+}
 
-    if (isAtBottom) {
-      // If already at the bottom, scroll to the top
-      scrollingElement.scrollTop = 0;
-    } else {
-      // If not at the bottom, scroll to the bottom
-      scrollingElement.scrollTop = scrollingElement.scrollHeight;
-    }
-  }, 100); // 100 milliseconds
+function toggleScroll() {
+  if (showForm.value) {
+    // If the form is visible, scroll to a specific height
+    scrollPosition.value = 500; // Set your desired pixel height
+    scrollToHeight(scrollPosition.value);
+  } else {
+    // If the form is not visible, scroll back to the top
+    scrollPosition.value = 0;
+    scrollToHeight(scrollPosition.value);
+  }
+
+  // Toggle the form visibility
+  showForm.value = !showForm.value;
 }
 </script>
 
@@ -54,7 +56,7 @@ function scrollToTopOrBottom() {
       </div>
     </div>
     <div class="contact-wrapper">
-      <div @click="showForm = !showForm; scrollToTopOrBottom()" class="contact-header" :class="{ showForm: showForm }">
+      <div @click="toggleScroll" class="contact-header" :class="{ showForm: showForm }">
         {{ showForm ? 'Lets get in touch! &#9660;' : 'Lets get in touch! &#9650;' }}
       </div>
       <ContactForm :class="{ 'formFadeIn': !showForm, 'formFadeOut': showForm }" class="contactForm" ref="contactForm" />

@@ -3,13 +3,13 @@
   animation: appear 1s ease-in-out forwards;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1400px;
   gap: 5rem;
   align-items: flex-start;
   margin-left: 10rem;
-  
+  height: 1200px;
 }
 
 @keyframes appear {
