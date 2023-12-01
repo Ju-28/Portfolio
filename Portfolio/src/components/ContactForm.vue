@@ -1,0 +1,63 @@
+<script setup>
+import emailjs from 'emailjs-com';
+import { ref } from 'vue';
+
+const form = ref(null);
+const inputFieldReset = ref(null);
+const formSent = ref(null)
+
+const mailData = {
+    SERVICE_ID: 'service_8g4fnzo',
+    TEMPLATE_ID: 'template_9vbjw1a',
+    PUBLIC_KEY: '-bWoGd2tE8SGlNllE',
+}
+
+
+const sendMail = () => {
+    emailjs.sendForm(mailData.SERVICE_ID, mailData.TEMPLATE_ID, form.value, mailData.PUBLIC_KEY)
+        .then(() => {
+            alert('Message sent!');
+            inputFieldReset.value = " ";
+        })
+        .catch((error) => {
+            alert('Message not sent', error);
+        });
+};
+</script>
+
+<template>
+    <div class="form-container">
+        <form class="form" ref="form" @submit.prevent="sendMail">
+            <div class="form-inputs">
+                <div class="form-left">
+                    <div class="input-container ic2">
+                        <input id="from_name" class="input" type="text" placeholder=" " :value="inputFieldReset" required />
+                        <div class="cut cut-short"></div>
+                        <label for="from_name" class="placeholder">Name</label>
+                    </div>
+                    <div class="input-container ic2">
+                        <input id="email" class="input" type="text" placeholder=" " :value="inputFieldReset" required />
+                        <div class="cut cut-short"></div>
+                        <label for="email" class="placeholder">E-Mail</label>
+                    </div>
+                    <div class="input-container ic2">
+                        <input id="subject" class="input" type="text" placeholder=" " :value="inputFieldReset" required />
+                        <div class="cut cut-mid"></div>
+                        <label for="subject" class="placeholder">Subject</label>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="input-container ic2">
+                        <textarea id="message" class="input" type="text" placeholder=" " :value="inputFieldReset"
+                            required />
+                        <div class="cut"></div>
+                        <label for="message" class="placeholder message">Message</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-submit">
+                <input class="submit" type="submit" name="send" value="Send" @submit.prevent="onSubmit" @click="formSent = !formSent"/>
+            </div>
+        </form>
+    </div>
+</template> 

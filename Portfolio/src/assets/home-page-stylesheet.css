@@ -7,11 +7,106 @@
   align-items: center;
   max-width: 1400px;
   gap: 5rem;
+  align-items: flex-start;
+  margin-left: 10rem;
+  
 }
 
 @keyframes appear {
   to {
     opacity: 1;
+  }
+}
+
+.bubble-purple {
+  height: 500px;
+  width: 800px;
+  background-color: rgba(116, 0, 217, 0.692);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(116, 0, 217, 0.692);
+  position: absolute;
+  filter: blur(7rem);
+  animation: movePurpleBubble 40s ease-in-out infinite;
+  z-index: -1;
+}
+
+.bubble-yellow {
+  background-color: rgba(217, 159, 0, 0.692);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(217, 159, 0, 0.692);
+  position: absolute;
+  filter: blur(10rem);
+  height: 800px;
+  width: 500px;
+  animation: moveYellowBubble 55s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes movePurpleBubble {
+  0%, 100% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  10% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  20% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  30% {
+    transform: translate(-400px, -100px) scale(1);
+  }
+  40% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  50% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  60% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  70% {
+    transform: translate(0px, -100px) scale(1);
+  }
+  80% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  90% {
+    transform: translate(-400px, 300px) scale(1);
+  }
+}
+
+@keyframes moveYellowBubble {
+  0%, 100% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  10% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  20% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  30% {
+    transform: translate(-400px, -100px) scale(1);
+  }
+  40% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  50% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  60% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  70% {
+    transform: translate(0px, -100px) scale(1);
+  }
+  80% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  90% {
+    transform: translate(-400px, 300px) scale(1);
   }
 }
 
@@ -24,8 +119,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-self: flex-start;
-  margin-left: 10rem;
+  filter: drop-shadow(0 10px 5px black);
 }
 
 .introduction {
@@ -47,7 +141,9 @@
   padding-bottom: 1.8rem;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 1s 1s linear forwards, flare 0.3s 2.1s ease-in forwards;
+  animation:
+    typing 1s 1s linear forwards,
+    flare 0.3s 2.1s ease-in forwards;
 }
 
 @keyframes typing {
@@ -61,33 +157,22 @@
 }
 
 @keyframes flare {
-    0% {
-        text-shadow: 0;
-    }
-    50% {
-        color: #bdfffc;
-        text-shadow: 0 0 30px #4bc2bc;
-    }
-    100% {
-        color: #8892b0;
-        text-shadow: 0 0 50px transparent;
-    }
+  0% {
+    text-shadow: 0;
+  }
+  50% {
+    color: #bdfffc;
+    text-shadow: 0 0 30px #4bc2bc;
+  }
+  100% {
+    color: #8892b0;
+    text-shadow: 0 0 50px transparent;
+  }
 }
 
 .story {
   font-family: 'Nunito Sans', sans-serif;
   text-align: justify;
-}
-
-.bg-text {
-  opacity: 0;
-  z-index: -1;
-  color: #8892b02c;
-  position: absolute;
-  max-width: 900px;
-  font-size: 7rem;
-  text-align: end;
-  animation: slideIn 2s 1s ease-in-out forwards;
 }
 
 @keyframes slideIn {
@@ -100,24 +185,33 @@
   100% {
     opacity: 1;
     font-size: 7rem;
-    transform: translateY(30px) translateX(190px) perspective(800px) rotateY(-40deg);
+    transform: translateY(-20px) translateX(190px) perspective(800px) rotateY(-40deg);
   }
 }
 
 .contact-wrapper {
-    padding: 1rem;
-    border: solid 2px #4bc2bc;
-    border-radius: 8px;
-    color: #4bc2bc;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-family: 'Sometype Mono', monospace;
-    align-self: flex-start;
-    margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 100px;
 }
 
-.contact-wrapper:hover {
-    box-shadow: 0 0 10px 0 #4bc2bc;
-    background-color: #4bc2bc;
-    color: #010f23;
+.contact-header {
+  padding: 1rem;
+  border: solid 2px #4bc2bc;
+  border-radius: 8px;
+  color: #4bc2bc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Sometype Mono', monospace;
+  align-self: flex-start;
+  background-color: transparent;
+  z-index: 1;
+  filter: drop-shadow(0 5px 5px black);
+}
+
+.contact-header:hover {
+  box-shadow: 0 0 10px 0 #4bc2bc;
+  background-color: #4bc2bc;
+  color: #010f23;
 }

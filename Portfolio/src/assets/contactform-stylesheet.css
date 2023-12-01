@@ -1,0 +1,220 @@
+.form-container {
+  opacity: 0;
+  background-color: transparent;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: flex-start;
+  transform: translateY(-300px) scale(3);
+}
+
+.formFadeIn {
+  animation: formFadeIn 0.4s ease-in-out forwards;
+}
+
+.formFadeOut {
+  animation: formFadeOut 0.45s ease-in-out forwards;
+}
+
+@keyframes formFadeIn {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes formFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: -2;
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-400px) translateX(50px) scale(0.1);
+  }
+  100% {
+    display: none;
+  }
+}
+
+.form {
+  background-color: transparent;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+}
+
+.form-left {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 200%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  padding: 10px 10px 10px 10px;
+  border: 0;
+  border-bottom: solid 2px #cdd7f739;
+  color: #c5c9c9;
+  width: 100%;
+  font-family: 'Cabin', sans-serif;
+  font-size: large;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Add these styles to disable textarea resizing */
+.input-container.ic2 textarea {
+  resize: none !important; /* Set the maximum height to your desired value */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds max-height */
+  border: 0;
+}
+
+/* Add this style to hide the resizing handle for WebKit browsers */
+.input-container.ic2 textarea::-webkit-resizer {
+  display: none;
+}
+
+/* Add this style to hide the resizing handle for Gecko browsers */
+.input-container.ic2 textarea {
+  resize: none !important;
+}
+
+/* Add this style to hide the resizing handle for Trident browsers */
+.input-container.ic2 textarea::-ms-resizer {
+  display: none;
+}
+
+#message {
+  border: 0;
+  border-bottom: solid 2px #cdd7f739;
+  color: #c5c9c9;
+  line-height: 1;
+  height: 204px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  overflow-y: auto;
+  resize: none !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.cut {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 66px;
+}
+
+.cut-mid {
+  width: 58px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.placeholder {
+  color: #aeaeb9;
+  font-family: sans-serif;
+  left: 10px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition:
+    transform 200ms,
+    color 200ms;
+  top: 15px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(10px);
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-26px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+
+.input:focus {
+  border-bottom: solid 2px #4bc2bc;
+}
+
+#message:focus {
+  border-bottom: solid 2px #4bc2bc;
+}
+
+.submit {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  border: solid 2px #4bc2bc;
+  width: 200%;
+  transform: translateX(4rem);
+  border-radius: 8px;
+  color: #4bc2bc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Sometype Mono', monospace;
+  background-color: transparent;
+  filter: drop-shadow(0 10px 5px black);
+}
+
+.submit:hover {
+  box-shadow: 0 0 10px 0 #4bc2bc;
+  background-color: #4bc2bc;
+  color: #010f23;
+}
+
+.submit:active {
+  background-color: #358884;
+  border: solid 2px #358884;
+  color: #022c66;
+}
