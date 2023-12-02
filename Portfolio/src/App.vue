@@ -28,6 +28,7 @@ onMounted(() => {
     isNavbarVisible.value = true;
   }, 500);
 });
+
 </script>
 
 <template>
@@ -37,13 +38,17 @@ onMounted(() => {
       <nav class="navbar" v-if="isNavbarVisible">
         <div class="left-navbar" ref="leftNavbar">
           <ul>
-            <RouterLink :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems" :key="index" :style="{ 'animation-delay': `${index * 0.2}s` }">{{ item.label }}</RouterLink>
+            <RouterLink :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems" :key="index"
+              :style="{ 'animation-delay': `${index * 0.2}s` }">{{ item.label }}</RouterLink>
           </ul>
         </div>
         <div class="right-navbar" ref="rightNavbar">
           <ul>
-            <router-link v-for="(item, index) in rightNavbarItems" :to="item.to" class="navbar-item" :key="index" :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }">{{ item.label }}</router-link>
-            <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf" :style="{ 'animation-delay': `${(leftNavbarItems.length + rightNavbarItems.length) * 0.2}s` }">Resume</a>
+            <router-link v-for="(item, index) in rightNavbarItems" :to="item.to" class="navbar-item" :key="index"
+              :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }">{{ item.label
+              }}</router-link>
+            <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf"
+              :style="{ 'animation-delay': `${(leftNavbarItems.length + rightNavbarItems.length) * 0.2}s` }">Resume</a>
           </ul>
         </div>
       </nav>
