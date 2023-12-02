@@ -13,7 +13,7 @@ const mailData = {
 }
 
 
-const sendMail = () => {
+const sendEmail = () => {
     emailjs.sendForm(mailData.SERVICE_ID, mailData.TEMPLATE_ID, form.value, mailData.PUBLIC_KEY)
         .then(() => {
             alert('Message sent!');
@@ -27,28 +27,28 @@ const sendMail = () => {
 
 <template>
     <div class="form-container">
-        <form class="form" ref="form" @submit.prevent="sendMail">
+        <form class="form" ref="form" @submit.prevent="sendEmail">
             <div class="form-inputs">
                 <div class="form-left">
                     <div class="input-container ic2">
-                        <input id="from_name" class="input" type="text" placeholder=" " :value="inputFieldReset" required />
+                        <input id="from_name" class="input" type="text" name="user_name" placeholder=" " :value="inputFieldReset" required />
                         <div class="cut cut-short"></div>
                         <label for="from_name" class="placeholder">Name</label>
                     </div>
                     <div class="input-container ic2">
-                        <input id="email" class="input" type="text" placeholder=" " :value="inputFieldReset" required />
+                        <input id="email" class="input" type="text" name="user_email" placeholder=" " :value="inputFieldReset" required />
                         <div class="cut cut-short"></div>
                         <label for="email" class="placeholder">E-Mail</label>
                     </div>
                     <div class="input-container ic2">
-                        <input id="subject" class="input" type="text" placeholder=" " :value="inputFieldReset" required />
+                        <input id="subject" class="input" type="text" name="subject" placeholder=" " :value="inputFieldReset" required />
                         <div class="cut cut-mid"></div>
                         <label for="subject" class="placeholder">Subject</label>
                     </div>
                 </div>
                 <div class="form-right">
                     <div class="input-container ic2">
-                        <textarea id="message" class="input" type="text" placeholder=" " :value="inputFieldReset"
+                        <textarea id="message" class="input" type="text" name="message" placeholder=" " :value="inputFieldReset"
                             required />
                         <div class="cut"></div>
                         <label for="message" class="placeholder message">Message</label>
@@ -56,7 +56,7 @@ const sendMail = () => {
                 </div>
             </div>
             <div class="form-submit">
-                <input class="submit" type="submit" name="send" value="Send" @submit.prevent="onSubmit" @click="formSent = !formSent"/>
+                <input class="submit" type="submit" name="send" value="Send" @click="formSent = !formSent"/>
             </div>
         </form>
     </div>

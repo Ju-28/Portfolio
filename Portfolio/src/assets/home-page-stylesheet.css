@@ -1,6 +1,4 @@
 .home-page {
-  opacity: 0;
-  animation: appear 1s ease-in-out forwards;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,9 +10,25 @@
   height: 1200px;
 }
 
-@keyframes appear {
-  to {
+@keyframes SlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+  100% {
     opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes SlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(800px);
   }
 }
 
@@ -32,12 +46,12 @@
 }
 
 .bubble-yellow {
-  background-color: rgba(217, 159, 0, 0.692);
+  background-color: rgba(193, 143, 4, 0.692);
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 100px rgba(217, 159, 0, 0.692);
+  box-shadow: 0 0 100px rgba(193, 143, 4, 0.692);
   position: absolute;
-  filter: blur(10rem);
+  filter: blur(9rem);
   height: 800px;
   width: 500px;
   animation: moveYellowBubble 55s ease-in-out infinite;
@@ -67,13 +81,13 @@
     transform: translate(200px, 100px) scale(1);
   }
   70% {
-    transform: translate(0px, -100px) scale(1);
+    transform: translate(400px, -100px) scale(1);
   }
   80% {
-    transform: translate(-200px, 100px) scale(1);
+    transform: translate(600px, 100px) scale(1);
   }
   90% {
-    transform: translate(-400px, 300px) scale(1);
+    transform: translate(400px, 300px) scale(1);
   }
 }
 
@@ -100,13 +114,13 @@
     transform: translate(200px, 100px) scale(1);
   }
   70% {
-    transform: translate(0px, -100px) scale(1);
+    transform: translate(400px, -100px) scale(1);
   }
   80% {
-    transform: translate(-200px, 100px) scale(1);
+    transform: translate(600px, 100px) scale(1);
   }
   90% {
-    transform: translate(-400px, 300px) scale(1);
+    transform: translate(400px, 300px) scale(1);
   }
 }
 
@@ -119,7 +133,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  filter: drop-shadow(0 10px 5px black);
+  filter: drop-shadow(0 10px 5px #010f23);
+  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
 }
 
 .introduction {
@@ -142,8 +157,8 @@
   white-space: nowrap;
   overflow: hidden;
   animation:
-    typing 1s 1s linear forwards,
-    flare 0.3s 2.1s ease-in forwards;
+    typing 1s 2s linear forwards,
+    flare 0.3s 3.1s ease-in forwards;
 }
 
 @keyframes typing {
@@ -175,25 +190,12 @@
   text-align: justify;
 }
 
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    font-size: 0.1rem;
-    transform: translateY(30px) rotateY(-40deg);
-  }
-
-  100% {
-    opacity: 1;
-    font-size: 7rem;
-    transform: translateY(-20px) translateX(190px) perspective(800px) rotateY(-40deg);
-  }
-}
-
 .contact-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5rem;
   height: 100px;
+  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
 }
 
 .contact-header {
@@ -207,7 +209,7 @@
   align-self: flex-start;
   background-color: transparent;
   z-index: 1;
-  filter: drop-shadow(0 5px 5px black);
+  filter: drop-shadow(0 5px 5px #010f23);
 }
 
 .contact-header:hover {

@@ -1,5 +1,7 @@
 <template>
-    <main class="projects-page">
-        
+    <main class="home-page">
+        <div class="personal-wrapper">
+            <div class="name">Coming Soon!</div>
+        </div>
     </main>
 </template>

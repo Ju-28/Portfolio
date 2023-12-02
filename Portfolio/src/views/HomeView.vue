@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm.vue';
 const bgTextWrapper = ref(null);
 const showForm = ref(true);
 const scrollPosition = ref(0);
+const windowLoaded = ref(false); // Added to track window load status
 
 onMounted(async () => {
   await nextTick();
@@ -14,6 +15,9 @@ onMounted(async () => {
     bgTextWrapper.value.offsetHeight;
     bgTextWrapper.value.classList.add('in-view');
   }
+
+  // Set windowLoaded to true after the window has loaded
+  windowLoaded.value = true;
 });
 
 function scrollToHeight(height) {
@@ -43,15 +47,15 @@ function toggleScroll() {
   <main class="home-page">
     <div class="personal-wrapper">
       <div class="introduction">Hey there! My name is</div>
-      <div class="name">My Name.</div>
+      <div class="name">Julius Buller.</div>
       <div class="job">I bring visions into reality.</div>
       <div class="story">
         While already gaining first experiences during college,
         I really started mastering my work shortly after I graduated
-        in early 20XX.
+        in early 2024.
         Designwise, I spezialized myself in the fields of dark, neon
-        and vibrant solutions, resulting in more than twenty top notch
-        projects, making me and my work <span class="highlighted">the ideal choice</span> to bring your
+        and vibrant solutions, resulting in a rich portfolio of top-notch projects, 
+        making me and my work <span class="highlighted">the ideal choice</span> to bring your
         imagination and wishes to life.
       </div>
     </div>
