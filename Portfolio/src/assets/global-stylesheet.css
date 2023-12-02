@@ -15,6 +15,37 @@
   border: 10px solid #010f23;
 }
 
+.cursor-bubble {
+  height: 30px;
+  width: 30px;
+  transform: translate(-15px, -15px);
+  border-radius: 50%;
+  border: solid 1px rgba(255, 255, 255, 0.398);
+  background-color: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 0 5px white, inset 0 0 5px white;
+  filter: blur(1px);
+  position: absolute;
+  z-index: 5000;
+  pointer-events: none;
+  backdrop-filter: blur(1px);
+}
+
+.morph {
+  width: 60px;
+}
+
+@keyframes morphBubble {
+  0% {
+    width: 30px;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +58,13 @@ body {
   background-color: #010f23;
   max-width: 1400px;
   margin-inline: auto;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .landing-page {
@@ -51,8 +89,6 @@ a {
 
 .navbar {
   position: fixed;
-  width: 100vw;
-  max-width: 1400px;
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -63,6 +99,9 @@ a {
   font-family: 'Sometype Mono', monospace;
   padding-top: 1rem;
   z-index: 3;
+  width: 100%;
+  max-width: 1400px;
+  backdrop-filter: blur(0.1rem);
 }
 
 .left-navbar ul {
@@ -95,11 +134,14 @@ a {
 }
 
 .navbar-item {
+  opacity: 0;
   padding: 1rem;
   color: #cdd7f7;
   transition: all 0.3s ease;
   cursor: pointer;
   z-index: 3;
+  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
+  animation-delay: 2s;
 }
 
 .navbar-item:hover {
@@ -107,12 +149,25 @@ a {
   text-shadow: 0 0 10px #4bc2bc;
 }
 
+@keyframes SlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 .pdf-button {
+  opacity: 0;
   padding: 1rem;
   border: solid 2px #4bc2bc;
   border-radius: 8px;
   color: #4bc2bc;
   transition: all 0.3s ease;
+  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
 }
 
 .pdf-button:hover {

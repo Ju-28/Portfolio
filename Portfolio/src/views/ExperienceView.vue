@@ -1,5 +1,7 @@
 <template>
-    <main class="experience-page">
-        
-    </main>
+  <main class="home-page">
+    <div class="personal-wrapper">
+      <div class="name">Coming Soon!</div>
+    </div>
+  </main>
 </template>
