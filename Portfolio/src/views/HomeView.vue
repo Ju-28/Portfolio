@@ -66,6 +66,7 @@ function toggleScroll() {
       <ContactForm :class="{ 'formFadeIn': !showForm, 'formFadeOut': showForm }" class="contactForm" ref="contactForm" />
     </div>
     <div class="bubble-purple"></div>
+    <div class="bubble-peach"></div>
     <div class="bubble-yellow"></div>
   </main>
 </template>
