@@ -7,6 +7,7 @@ import '@/assets/contactform-stylesheet.css';
 // import HomeLogo from '/public/svg/icons8-home-100.svg'
 
 import CursorFollower from '@/components/CursorBubble.vue';
+import { init } from 'emailjs-com';
 
 const pdfPath = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_CV.pdf';
 
@@ -27,6 +28,7 @@ onMounted(() => {
   setTimeout(() => {
     isNavbarVisible.value = true;
   }, 500);
+  init();
 });
 
 </script>

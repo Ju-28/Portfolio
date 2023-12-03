@@ -1,24 +1,23 @@
 <script setup>
-import { ref, onMounted, nextTick } from 'vue';
-
+import { ref } from 'vue';
+import TypeIt from "typeit";
 import ContactForm from '@/components/ContactForm.vue';
 
-const bgTextWrapper = ref(null);
 const showForm = ref(true);
 const scrollPosition = ref(0);
-const windowLoaded = ref(false); // Added to track window load status
 
-onMounted(async () => {
-  await nextTick();
+// document.addEventListener("DOMContentLoaded", function () {
+//   new TypeIt(".job", {
+//     speed: 50,
+//     cursor: {
+//         animation: {
 
-  if (bgTextWrapper.value) {
-    bgTextWrapper.value.offsetHeight;
-    bgTextWrapper.value.classList.add('in-view');
-  }
-
-  // Set windowLoaded to true after the window has loaded
-  windowLoaded.value = true;
-});
+//         },
+//     }
+//   })
+//     .type("I bring visions into reality.")
+//     .go();
+// })
 
 function scrollToHeight(height) {
   setTimeout(() => {
@@ -29,6 +28,10 @@ function scrollToHeight(height) {
 
 function toggleScroll() {
   if (showForm.value) {
+    const formContainer = document.querySelector('.form-container');
+    if (formContainer) {
+      formContainer.classList.add('formFadeOut');
+    }
     // If the form is visible, scroll to a specific height
     scrollPosition.value = 500; // Set your desired pixel height
     scrollToHeight(scrollPosition.value);
@@ -48,13 +51,13 @@ function toggleScroll() {
     <div class="personal-wrapper">
       <div class="introduction">Hey there! My name is</div>
       <div class="name">Julius Buller.</div>
-      <div class="job">I bring visions into reality.</div>
+      <div class="job type-effect"></div>
       <div class="story">
         While already gaining first experiences during college,
         I really started mastering my work shortly after I graduated
         in early 2024.
         Designwise, I spezialized myself in the fields of dark, neon
-        and vibrant solutions, resulting in a rich portfolio of top-notch projects, 
+        and vibrant solutions, resulting in a rich portfolio of top-notch projects,
         making me and my work <span class="highlighted">the ideal choice</span> to bring your
         imagination and wishes to life.
       </div>

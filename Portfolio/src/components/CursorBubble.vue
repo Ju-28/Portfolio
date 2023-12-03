@@ -11,7 +11,7 @@ const updateCursorPosition = (event) => {
     setTimeout(() => {
         position.value = { x: event.clientX, y: event.clientY + window.scrollY };
         
-    }, 0); // 50 milliseconds delay
+    }, 100);
 };
 
 onMounted(() => {

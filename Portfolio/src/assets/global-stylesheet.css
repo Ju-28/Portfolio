@@ -15,7 +15,7 @@
   border: 10px solid #010f23;
 }
 
-/* .cursor-bubble {
+/* .cursor-bubble -> Small lense { 
   height: 30px;
   width: 30px;
   transform: translate(-15px, -15px);
@@ -30,7 +30,7 @@
   backdrop-filter: blur(1px);
 } */
 
-.cursor-bubble {
+.cursor-bubble /* -> Big white shadow */ {
   transform: translate(-75px, -75px);
   height: 150px;
   width: 150px;
@@ -96,11 +96,12 @@ a {
   color: #4bc2bc;
   font-family: 'Sometype Mono', monospace;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   z-index: 3;
   width: 100%;
   max-width: 1400px;
-  backdrop-filter: blur(0.1rem);
   pointer-events: none;
+  backdrop-filter: blur(0.1rem);
 }
 
 .left-navbar ul {
@@ -168,6 +169,7 @@ a {
   color: #4bc2bc;
   transition: all 0.3s ease;
   animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
+  pointer-events: all;
 }
 
 .pdf-button:hover {

@@ -10,10 +10,15 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@janvorisek/drie": "^1.0.0-alpha-1.48",
+    "chroma-js": "^2.4.2",
     "emailjs-com": "^3.2.0",
     "matter-js": "^0.19.0",
     "pinia": "^2.1.7",
+    "simplex-noise": "^4.0.1",
     "smooth-scrollbar": "^8.8.4",
+    "three": "^0.134.0",
+    "typeit": "^8.8.0",
     "vue": "^3.3.9",
     "vue-router": "^4.2.5"
   },
