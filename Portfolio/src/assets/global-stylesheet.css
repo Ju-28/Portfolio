@@ -31,17 +31,29 @@
 } */
 
 .cursor-bubble /* -> Big white shadow */ {
-  transform: translate(-75px, -75px);
-  height: 150px;
-  width: 150px;
-  background-color: #aeaeaeb7;
+  transform: translate(-50px, -50px);
+  height: 100px;
+  width: 100px;
+  background-color: #aeaeae7e;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 20px #6e6e6e90;
+  box-shadow: 0 0 10px #6e6e6e90;
   position: absolute;
-  filter: blur(7rem);
+  filter: blur(4rem);
   z-index: 0;
   pointer-events: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  line-height: 0.2;
+  padding: 0;
+  margin: 0;
+  transform: translateX(0.3rem) translateY(0.5rem);
 }
 
 * {
@@ -81,8 +93,9 @@ a {
 
 .highlighted {
   color: #4bc2bc;
-  font-weight: 800;
   text-shadow: 0 0 2px #4bc2bc;
+  font-family: 'Sometype Mono', monospace;
+  padding-inline: 0.2rem;
 }
 
 .navbar {
