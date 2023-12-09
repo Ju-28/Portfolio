@@ -176,7 +176,7 @@
   color: #cdd7f7;
   width: 70%;
   max-width: 900px;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Permanent Marker', cursive;
   font-size: 800;
   display: flex;
   flex-direction: column;
@@ -197,12 +197,14 @@
 }
 
 .job {
-  font-size: 5rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3.8rem;
   font-weight: bolder;
-  color: #8892b0;
+  color: #8e92a0;
   padding-bottom: 1.8rem;
+  line-height: 1;
   animation:
-    flare 0.6s 2.2s ease-in forwards;
+    flare 0.6s 3.6s ease-in forwards;
 }
 
 @keyframes flare {
@@ -214,7 +216,7 @@
     text-shadow: 0 0 30px #4bc2bc;
   }
   100% {
-    color: #8892b0;
+    color: #c5c9d8;
     text-shadow: 0 0 50px transparent;
   }
 }

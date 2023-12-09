@@ -6,18 +6,23 @@ import ContactForm from '@/components/ContactForm.vue';
 const showForm = ref(true);
 const scrollPosition = ref(0);
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   new TypeIt(".job", {
-//     speed: 50,
-//     cursor: {
-//         animation: {
-
-//         },
-//     }
-//   })
-//     .type("I bring visions into reality.")
-//     .go();
-// })
+document.addEventListener("DOMContentLoaded", function () {
+  new TypeIt(".job", {
+    speed: 80,
+    cursorSpeed: 900,
+    
+  })
+    .type("I bri")
+    .pause(20)
+    .type("ng vis")
+    .pause(35)
+    .type("ions in")
+    .pause(30)
+    .type("to real")
+    .pause(10)
+    .type("ity. ")
+    .go();
+})
 
 function scrollToHeight(height) {
   setTimeout(() => {
