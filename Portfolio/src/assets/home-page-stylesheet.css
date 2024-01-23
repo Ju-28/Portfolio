@@ -188,7 +188,7 @@
   animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
   filter: drop-shadow(0 10px 5px #010f23);
   min-width: 1100px;
-  height: 100svh;
+  height: 80svh;
 }
 
 .introduction {
