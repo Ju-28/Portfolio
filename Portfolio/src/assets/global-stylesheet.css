@@ -46,14 +46,48 @@
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
   line-height: 0.2;
   padding: 0;
   margin: 0;
   transform: translateX(0.3rem) translateY(0.5rem);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  right: 5%; /* Adjust the distance from the right as needed */
+  background-color: transparent;
+  color: #4bc2bc;
+  border: 2px solid #4bc2bc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  filter: drop-shadow(0 5px 5px #010f23);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Sometype Mono', monospace;
+  z-index: 1;
+  backdrop-filter: blur(0.2rem);
+}
+
+.scroll-to-top span {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0.5px;
+}
+
+.scroll-to-top:hover {
+  box-shadow: 0 0 10px 0 #4bc2bc;
+  background-color: #4bc2bc;
+  color: #010f23;
+}
+
+.scroll-to-top:hover span {
+  color: #010f23;
 }
 
 * {
@@ -95,11 +129,11 @@ a {
   color: #4bc2bc;
   text-shadow: 0 0 2px #4bc2bc;
   font-family: 'Sometype Mono', monospace;
-  padding-inline: 0.2rem;
+  word-spacing: -0.3rem;
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -114,7 +148,7 @@ a {
   width: 100%;
   max-width: 1400px;
   pointer-events: none;
-  backdrop-filter: blur(0.1rem);
+  /* backdrop-filter: blur(0.1rem); */
 }
 
 .left-navbar ul {
@@ -153,7 +187,7 @@ a {
   transition: all 0.3s ease;
   cursor: pointer;
   z-index: 3;
-  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
+  animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
   animation-delay: 2s;
   pointer-events: all;
 }
@@ -181,7 +215,7 @@ a {
   border-radius: 8px;
   color: #4bc2bc;
   transition: all 0.3s ease;
-  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
+  animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
   pointer-events: all;
 }
 
@@ -190,7 +224,6 @@ a {
   background-color: #4bc2bc;
   color: #010f23;
 }
-
 
 @media (max-width: 600px) {
   .cursor-bubble {
