@@ -7,7 +7,10 @@
   gap: 5rem;
   align-items: flex-start;
   margin-left: 10rem;
-  height: 1200px;
+  position: relative;
+  overflow: visible;
+  /* gap: 100svh; */
+  /* height: 1200px; */
 }
 
 @keyframes SlideIn {
@@ -39,7 +42,7 @@
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 100px rgba(116, 0, 217, 0.692);
-  position: absolute;
+  position: fixed;
   filter: blur(7rem);
   animation: movePurpleBubble 40s ease-in-out infinite;
   z-index: -1;
@@ -50,7 +53,7 @@
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 100px rgba(193, 143, 4, 0.692);
-  position: absolute;
+  position: fixed;
   filter: blur(9rem);
   height: 800px;
   width: 500px;
@@ -63,7 +66,7 @@
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 100px #d7461a;
-  position: absolute;
+  position: fixed;
   filter: blur(9rem);
   height: 700px;
   width: 200px;
@@ -72,7 +75,8 @@
 }
 
 @keyframes movePeachBubble {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(600px, -150px) scale(1.2);
   }
   10% {
@@ -102,12 +106,13 @@
   }
   90% {
     width: 200px;
-    transform: translate(500px, 25px) rotate(-120deg) ;
+    transform: translate(500px, 25px) rotate(-120deg);
   }
 }
 
 @keyframes movePurpleBubble {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(200px, 100px) scale(1);
   }
   10% {
@@ -140,7 +145,8 @@
 }
 
 @keyframes moveYellowBubble {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(200px, 100px) scale(1);
   }
   10% {
@@ -174,15 +180,15 @@
 
 .personal-wrapper {
   color: #cdd7f7;
-  width: 70%;
-  max-width: 900px;
-  font-family: 'Permanent Marker', cursive;
   font-size: 800;
   display: flex;
   flex-direction: column;
+  font-family: 'Nunito Sans', sans-serif;
   gap: 1rem;
+  animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
   filter: drop-shadow(0 10px 5px #010f23);
-  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
+  min-width: 1100px;
+  height: 100svh;
 }
 
 .introduction {
@@ -194,17 +200,16 @@
   color: #cdd7f7;
   font-size: 5rem;
   font-weight: bolder;
+  line-height: 1;
 }
 
 .job {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 3.8rem;
+  font-size: 5rem;
   font-weight: bolder;
   color: #8e92a0;
   padding-bottom: 1.8rem;
   line-height: 1;
-  animation:
-    flare 0.6s 3.6s ease-in forwards;
+  animation: flare 0.6s 3.6s ease-in forwards;
 }
 
 @keyframes flare {
@@ -223,7 +228,119 @@
 
 .story {
   font-family: 'Nunito Sans', sans-serif;
-  text-align: justify;
+  text-align: left;
+  max-width: 600px;
+  color: #8e92a0;
+}
+
+.more-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.scroll-to-about-me {
+  position: relative;
+  background-color: transparent;
+  color: #4bc2bc;
+  border: 2px solid #4bc2bc;
+  border-radius: 8px;
+  padding: 1rem;
+  filter: drop-shadow(0 3px 3px #010f23);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-self: center;
+  width: fit-content;
+  font-family: 'Sometype Mono', monospace;
+  z-index: 1;
+}
+
+.scroll-to-about-me:hover {
+  box-shadow: 0 0 10px 0 #4bc2bc;
+  background-color: #4bc2bc;
+  color: #010f23;
+}
+
+.about-me-container {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Nunito Sans', sans-serif;
+  width: 40%;
+  gap: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 10rem;
+}
+
+.about-me-headline {
+  display: flex;
+  gap: 1rem;
+}
+
+.material-symbols-sharp {
+  color: #4bc2bc;
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+
+.about-me-h-line {
+  align-self: center;
+  width: 50%;
+  height: 0;
+  border-bottom: solid 1px gray;
+}
+
+.about-me-left {
+  color: #8e92a0;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 1rem;
+}
+
+.about-me-left h2 {
+  color: #cdd7f7;
+}
+
+.about-me-right {
+  position: relative;
+  display: inline-block;
+}
+
+.img-box {
+  border: 3px solid #4bc2bc;
+  border-radius: 15px;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 80px;
+  left: 30px;
+  background-color: transparent;
+}
+
+.about-me-right img {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.img-bw {
+  transition: opacity 0.3s ease;
+}
+
+.img-bw:hover {
+  opacity: 0;
+}
+
+.contact-anchor {
+  height: 1px;
+  display: none;
 }
 
 .contact-wrapper {
@@ -231,10 +348,11 @@
   flex-direction: column;
   gap: 5rem;
   height: 100px;
-  animation: SlideIn 1.2s cubic-bezier(.23,.74,.47,.99) forwards;
+  animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
 }
 
 .contact-header {
+  position: relative;
   padding: 1rem;
   border: solid 2px #4bc2bc;
   border-radius: 8px;

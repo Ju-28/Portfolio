@@ -6,10 +6,12 @@
   align-items: flex-start;
   transform: translateY(-300px) scale(3);
   filter: drop-shadow(0 -2px 3px #010f23);
+  margin-left: 4rem;
 }
 
 .formFadeIn {
   animation: formFadeIn 0.4s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .formFadeOut {

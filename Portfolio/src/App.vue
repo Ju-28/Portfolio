@@ -1,17 +1,18 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import '@/assets/global-stylesheet.css';
 import '@/assets/home-page-stylesheet.css';
 import '@/assets/contactform-stylesheet.css';
 // import HomeLogo from '/public/svg/icons8-home-100.svg'
 
-import CursorFollower from '@/components/CursorBubble.vue';
+// import CursorFollower from '@/components/CursorBubble.vue';
 import { init } from 'emailjs-com';
 
 const pdfPath = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_CV.pdf';
 
 const isNavbarVisible = ref(false);
+const scrollPosition = ref(0);
 
 const leftNavbarItems = [
   { label: 'Home', to: '/' }
@@ -31,17 +32,46 @@ onMounted(() => {
   init();
 });
 
+function scrollToHeight(height) {
+  setTimeout(() => {
+    const scrollingElement = document.scrollingElement || document.body;
+    scrollingElement.scrollTop = height;
+  }, 100);
+}
+
+function scrollToTop() {
+
+  const formContainer = document.querySelector('.form-container');
+  if (formContainer) {
+    formContainer.classList.add('formFadeOut');
+  }
+  scrollPosition.value = 0;
+  scrollToHeight(scrollPosition.value)
+}
+
+const handleScroll = () => {
+  scrollPosition.value = window.scrollY;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-  <CursorFollower />
+  <!-- <CursorFollower /> -->
   <main class="landing-page">
     <header>
       <nav class="navbar" v-if="isNavbarVisible">
         <div class="left-navbar" ref="leftNavbar">
           <ul>
             <RouterLink :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems" :key="index"
-              :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined" style="transform: scale(1.8);">
+              :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined"
+                style="transform: scale(1.8);">
                 home_app_logo
               </span></RouterLink>
           </ul>
@@ -61,5 +91,11 @@ onMounted(() => {
       </nav>
     </header>
     <RouterView />
+    <div v-if="scrollPosition >= 500" class="scroll-to-top" @click="scrollToTop"><span class="material-symbols-sharp">
+        arrow_upward
+      </span></div>
+    <div class="bubble-purple"></div>
+    <div class="bubble-peach"></div>
+    <div class="bubble-yellow"></div>
   </main>
 </template>
