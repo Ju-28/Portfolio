@@ -7,8 +7,8 @@ const showForm = ref(true);
 const scrollPosition = ref(0);
 const aboutMeContainerRef = ref(null);
 
-const coloredImageSrc = 'public/images/julius_buller.png';
-const blackAndWhiteImageSrc = 'public/images/julius_buller_bw.png';
+const coloredImageSrc = '/images/julius_buller.png';
+const blackAndWhiteImageSrc = '/images/julius_buller_bw.png';
 
 document.addEventListener("DOMContentLoaded", function () {
   new TypeIt(".job", {
