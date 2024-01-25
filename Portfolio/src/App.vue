@@ -41,12 +41,9 @@ function scrollToHeight(height) {
 
 function scrollToTop() {
 
-  const formContainer = document.querySelector('.form-container');
-  if (formContainer) {
-    formContainer.classList.add('formFadeOut');
-  }
   scrollPosition.value = 0;
   scrollToHeight(scrollPosition.value)
+
 }
 
 const handleScroll = () => {
@@ -66,27 +63,30 @@ onBeforeUnmount(() => {
   <!-- <CursorFollower /> -->
   <main class="landing-page">
     <header>
+      <div class="blur"></div>
       <nav class="navbar" v-if="isNavbarVisible">
-        <div class="left-navbar" ref="leftNavbar">
-          <ul>
-            <RouterLink :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems" :key="index"
-              :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined"
-                style="transform: scale(1.8);">
-                home_app_logo
-              </span></RouterLink>
-          </ul>
-        </div>
-        <div class="right-navbar" ref="rightNavbar">
-          <ul>
-            <router-link v-for="(item, index) in rightNavbarItems" :to="item.to" class="navbar-item" :key="index"
-              :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }">{{ item.label
-              }}</router-link>
-            <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf"
-              :style="{ 'animation-delay': `${(leftNavbarItems.length + rightNavbarItems.length) * 0.2}s` }">Resume<span
-                class="material-symbols-outlined">
-                download
-              </span></a>
-          </ul>
+        <div class="inner-nav">
+          <div class="left-navbar" ref="leftNavbar">
+            <ul>
+              <RouterLink :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems" :key="index"
+                :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined"
+                  style="transform: scale(1.8);">
+                  home_app_logo
+                </span></RouterLink>
+            </ul>
+          </div>
+          <div class="right-navbar" ref="rightNavbar">
+            <ul>
+              <router-link v-for="(item, index) in rightNavbarItems" :to="item.to" class="navbar-item" :key="index"
+                :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }">{{ item.label
+                }}</router-link>
+              <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf"
+                :style="{ 'animation-delay': `${(leftNavbarItems.length + rightNavbarItems.length) * 0.2}s` }">Resume<span
+                  class="material-symbols-outlined">
+                  download
+                </span></a>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
