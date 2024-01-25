@@ -41,12 +41,9 @@ function scrollToHeight(height) {
 
 function scrollToTop() {
 
-  const formContainer = document.querySelector('.form-container');
-  if (formContainer) {
-    formContainer.classList.add('formFadeOut');
-  }
   scrollPosition.value = 0;
   scrollToHeight(scrollPosition.value)
+
 }
 
 const handleScroll = () => {

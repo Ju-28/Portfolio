@@ -83,6 +83,7 @@
 .scroll-to-top:hover {
   box-shadow: 0 0 10px 0 #4bc2bc;
   background-color: #4bc2bc;
+  transform: scale(0.95);
   color: #010f23;
 }
 
@@ -98,7 +99,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100svh;
   background-color: #010f23;
   max-width: 1400px;
   margin-inline: auto;
@@ -223,10 +224,4 @@ a {
   box-shadow: 0 0 10px 0 #4bc2bc;
   background-color: #4bc2bc;
   color: #010f23;
-}
-
-@media (max-width: 600px) {
-  .cursor-bubble {
-    display: none;
-  }
 }

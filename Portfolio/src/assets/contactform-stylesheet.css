@@ -1,62 +1,12 @@
 .form-container {
-  opacity: 0;
   background-color: transparent;
   padding-bottom: 5rem;
   display: flex;
   align-items: flex-start;
-  transform: translateY(-300px) scale(3);
   filter: drop-shadow(0 -2px 3px #010f23);
   margin-left: 4rem;
+  align-self: center;
 }
-
-.formFadeIn {
-  animation: formFadeIn 0.4s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-.formFadeOut {
-  animation: formFadeOut 0.4s ease-in-out forwards;
-}
-
-@keyframes formFadeIn {
-  0% {
-    opacity: 0;
-    display: none;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0);
-  }
-}
-
-@keyframes formFadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-    z-index: -2;
-  }
-  90% {
-    opacity: 0;
-    transform: translateY(-400px) translateX(50px) scale(0.1);
-  }
-  100% {
-    display: none;
-  }
-}
-
-/* @keyframes formFadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0);
-  }
-  100% {
-    transform: scale(0.1);
-    opacity: 0;
-    display: none;
-  }
-} */
 
 .form {
   background-color: transparent;
@@ -217,7 +167,7 @@
   padding: 1rem;
   border: solid 2px #4bc2bc;
   width: 200%;
-  transform: translateX(4rem);
+  transform: translateX(4.25rem);
   border-radius: 8px;
   color: #4bc2bc;
   transition: all 0.3s ease;
@@ -225,7 +175,6 @@
   font-family: 'Sometype Mono', monospace;
   background-color: transparent;
   filter: drop-shadow(0 0 3px black);
-  transform: translateX(75px);
 }
 
 .submit:hover {
