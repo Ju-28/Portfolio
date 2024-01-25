@@ -104,7 +104,7 @@ const showSocials = () => {
             new things each time. If there is a problem, I want to solve it.
           </p>
           <p>This wide range of skills already allowed me to be part of an <span class="highlighted">online marketing
-              agency</span>, <span class="highlighted">a green tech energy start-up</span> and <span
+              agency</span>, <span class="highlighted">a green energy tech start-up</span> and <span
               class="highlighted">my
               own
               SaaS</span>.</p>
