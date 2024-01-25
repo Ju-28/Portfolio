@@ -30,18 +30,43 @@
   backdrop-filter: blur(1px);
 } */
 
-.cursor-bubble /* -> Big white shadow */ {
-  transform: translate(-50px, -50px);
-  height: 100px;
-  width: 100px;
-  background-color: #aeaeae7e;
+.bubble-purple {
+  height: 500px;
+  width: 800px;
+  background-color: rgba(116, 0, 217, 0.692);
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 10px #6e6e6e90;
-  position: absolute;
-  filter: blur(4rem);
-  z-index: 0;
-  pointer-events: none;
+  box-shadow: 0 0 100px rgba(116, 0, 217, 0.692);
+  position: fixed;
+  filter: blur(7rem);
+  animation: movePurpleBubble 40s ease-in-out infinite;
+  z-index: -1;
+}
+
+.bubble-yellow {
+  background-color: rgba(193, 143, 4, 0.692);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(193, 143, 4, 0.692);
+  position: fixed;
+  filter: blur(9rem);
+  height: 800px;
+  width: 500px;
+  animation: moveYellowBubble 55s ease-in-out infinite;
+  z-index: -1;
+}
+
+.bubble-peach {
+  background-color: #d7461a;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 100px #d7461a;
+  position: fixed;
+  filter: blur(9rem);
+  height: 700px;
+  width: 200px;
+  animation: movePeachBubble 30s ease-in-out infinite;
+  z-index: -1;
 }
 
 .material-symbols-outlined {
@@ -133,23 +158,35 @@ a {
   word-spacing: -0.3rem;
 }
 
-.navbar {
-  position: absolute;
+/* .blur {
   background-color: transparent;
+  backdrop-filter: blur(1rem);
+  height: 100px;
+  width: 2000px;
+  position: fixed;
+} */
+
+.navbar {
+  background: linear-gradient(to bottom, #010f23, transparent);
+  margin-bottom: 5rem;
+  color: #4bc2bc;
+  font-family: 'Sometype Mono', monospace;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  z-index: 3;
+  width: 100%;
+  pointer-events: none;
+  position: fixed;
+  /* backdrop-filter: blur(0.1rem); */
+}
+
+.inner-nav {
+  margin: auto;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
-  margin-bottom: 5rem;
-  color: #4bc2bc;
-  font-family: 'Sometype Mono', monospace;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  z-index: 3;
-  width: 100%;
-  max-width: 1400px;
-  pointer-events: none;
-  /* backdrop-filter: blur(0.1rem); */
 }
 
 .left-navbar ul {
