@@ -12,7 +12,10 @@ export default defineConfig({
     }
   },
   build: {
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      external: ['@vueuse/motion']
+    }
   },
   optimizeDeps: {
     exclude: ['js-big-decimal']
