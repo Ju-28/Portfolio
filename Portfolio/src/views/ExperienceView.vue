@@ -34,8 +34,8 @@ const unsetHovered = () => {
           my skillset and deepen my understanding for digital solutions.
         </div>
       </div>
-      <div class="experience-right">
-        <div v-motion-slide-right class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+      <div v-motion-fade class="experience-right">
+        <div class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()"
           :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             OCT 2023 - PRESENT
@@ -72,7 +72,7 @@ const unsetHovered = () => {
             </div>
           </div>
         </div>
-        <div v-motion-slide-right class="experience green-pocket" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+        <div class="experience green-pocket" @mouseover="setHovered()" @mouseleave="unsetHovered()"
           :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             MAR 2023 - SEP 2023
@@ -100,8 +100,8 @@ const unsetHovered = () => {
             </div>
           </div>
         </div>
-        <div v-motion-slide-right class="experience working-student" @mouseover="setHovered()"
-          @mouseleave="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
+        <div class="experience working-student" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+          :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             JUN 2022 - FEB 2023
           </div>
