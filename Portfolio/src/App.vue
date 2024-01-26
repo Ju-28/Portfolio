@@ -69,8 +69,8 @@ onBeforeUnmount(() => {
         <div class="inner-nav">
           <div class="left-navbar" ref="leftNavbar">
             <ul>
-              <RouterLink :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems" :key="index"
-                :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined"
+              <RouterLink @click="scrollToTop" :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems"
+                :key="index" :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined"
                   style="transform: scale(1.8);">
                   home_app_logo
                 </span></RouterLink>
