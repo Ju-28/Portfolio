@@ -16,7 +16,7 @@
   color: #cdd7f7;
   justify-content: space-between;
   font-family: 'Nunito Sans', sans-serif;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .experience-left {
@@ -82,23 +82,23 @@
   transition: all 0.2s ease;
 }
 
-.experience:hover {
-  backdrop-filter: blur(0.5rem);
-  background-color: rgba(255, 255, 255, 0.048);
-}
-
 .experience:hover .experience-content span {
   color: #4bc2bc;
 }
 
-.experience:has(+ .experience:hover),
-.experience:hover ~ .experience {
-  filter: opacity(0.5);
+.low-opacity {
+  opacity: 0.5 !important;
+}
+
+.experience:hover {
+  opacity: 1 !important;
+  backdrop-filter: blur(0.5rem) !important;
+  background-color: rgba(255, 255, 255, 0.048) !important;
 }
 
 .experience-time {
   font-size: 11px;
-  min-width: 120px;
+  min-width: 110px;
   color: #8e92a0;
 }
 

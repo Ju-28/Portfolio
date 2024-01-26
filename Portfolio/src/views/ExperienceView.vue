@@ -1,4 +1,15 @@
 <script setup>
+import { ref } from 'vue';
+
+const hoveredElement = ref(false);
+
+const setHovered = () => {
+  hoveredElement.value = true;
+};
+
+const unsetHovered = () => {
+  hoveredElement.value = false;
+};
 </script>
 
 <template>
@@ -20,7 +31,8 @@
         </div>
       </div>
       <div class="experience-right">
-        <div v-motion-slide-right class="experience bachelor">
+        <div v-motion-slide-right class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+          :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             OCT 2023 - PRESENT
           </div>
@@ -45,7 +57,8 @@
             </div>
           </div>
         </div>
-        <div v-motion-slide-right class="experience green-pocket">
+        <div v-motion-slide-right class="experience green-pocket" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+          :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             MAR 2023 - SEP 2023
           </div>
@@ -68,7 +81,8 @@
             </div>
           </div>
         </div>
-        <div v-motion-slide-right class="experience working-student">
+        <div v-motion-slide-right class="experience working-student" @mouseover="setHovered()"
+          @mouseleave="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             JUN 2022 - FEB 2023
           </div>
