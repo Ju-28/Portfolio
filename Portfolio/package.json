@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@janvorisek/drie": "^1.0.0-alpha-1.48",
+    "@vueuse/motion": "^2.0.0",
     "chroma-js": "^2.4.2",
     "emailjs-com": "^3.2.0",
     "matter-js": "^0.19.0",
