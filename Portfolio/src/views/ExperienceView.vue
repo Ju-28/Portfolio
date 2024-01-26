@@ -2,9 +2,97 @@
 </script>
 
 <template>
-  <main class="home-page">
-    <div class="personal-wrapper">
-      <div class="name">Coming Soon!</div>
+  <main class="experience-page">
+    <div class="experience-wrapper">
+      <div v-motion-slide-left class="experience-left">
+        <div class="experience-headline">
+          <h2><span class="material-symbols-sharp"> add
+            </span>Experience</h2>
+          <div class="about-me-h-line"></div>
+        </div>
+        <h2 class="experience-sub">Fullstack Engineer @42DIGITAL</h2>
+        <div class="experience-intro">
+          Since starting my bachelor's degree, I've been able to work in various positions, allowing me to gain a wide
+          variety of
+          usefull skills. From <span class="highlighted">data engineering</span> to <span class="highlighted">front-end
+            development and UI/UX design</span>, each role enabled me to expand
+          my skillset and deepen my understanding for digital solutions.
+        </div>
+      </div>
+      <div class="experience-right">
+        <div v-motion-slide-right class="experience bachelor">
+          <div class="experience-time">
+            OCT 2023 - PRESENT
+          </div>
+          <div class="experience-content">
+            <div>
+              <span class="experience-position">Fullstack Engineer · 42DIGITAL</span>
+              <p>Bachelor Thesis</p>
+            </div>
+            <p class="experience-info">During my bachelor thesis at 42DIGITAL, I was in charge of creating a customer
+              center from scratch, which
+              would help to manage clients, generate new revenue streams and lay the foundation of a new product line.
+              Some of the key features are 24/7 personal dashboard access, an alert manager for custom metrics and
+              providing
+              several AI-powered applications.</p>
+            <div class="technologies">
+              <span class="technology">Next.js</span>
+              <span class="technology">Django</span>
+              <span class="technology">Firebase</span>
+              <span class="technology">Docker</span>
+              <span class="technology">Git</span>
+              <span class="technology">Google Cloud</span>
+            </div>
+          </div>
+        </div>
+        <div v-motion-slide-right class="experience green-pocket">
+          <div class="experience-time">
+            MAR 2023 - SEP 2023
+          </div>
+          <div class="experience-content">
+            <div>
+              <span class="experience-position">Data Science & Strategy · GreenPocket</span>
+              <p>Internship</p>
+            </div>
+            <p class="experience-info">As part of my bachelor's degree program, I completed a 6-month internship.
+              During this time, my work within the scope of the "Einspahrzählerprojekt" was able to predict six-figure
+              revenue amounts for the company and demonstrably improve the performance of the utilized forecasting model
+              through parameter tuning. This experience, coupled with some of the courses I attended, gave me the
+              opportunity
+              to deepen my knowledge in the areas of ETL, Data Science, and Strategy. </p>
+            <div class="technologies">
+              <span class="technology">Python</span>
+              <span class="technology">XGBoost</span>
+              <span class="technology">Jupyter</span>
+              <span class="technology">Git</span>
+            </div>
+          </div>
+        </div>
+        <div v-motion-slide-right class="experience working-student">
+          <div class="experience-time">
+            JUN 2022 - FEB 2023
+          </div>
+          <div class="experience-content">
+            <div>
+              <span class="experience-position">Data Engineer · 42DIGITAL</span>
+              <p>Working Student</p>
+            </div>
+            <p class="experience-info">In my first job in the IT industry, I began as a working student at 42DIGITAL,
+              where I supported the daily work of the Data & AI team. I was responsible for numerous ETL processes, cloud
+              functions and integrations, as well as data visualization for B2B clients. Here, I gained initial experience
+              with Google Cloud and its functions, while also learning to create efficient SQL queries and data pipelines.
+            </p>
+            <div class="technologies">
+              <span class="technology">Python</span>
+              <span class="technology">SQL</span>
+              <span class="technology">Big Query</span>
+              <span class="technology">Jupyter</span>
+              <span class="technology">Google Cloud</span>
+              <span class="technology">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </main>

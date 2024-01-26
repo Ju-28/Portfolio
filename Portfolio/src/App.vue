@@ -4,6 +4,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import '@/assets/global-stylesheet.css';
 import '@/assets/home-page-stylesheet.css';
 import '@/assets/contactform-stylesheet.css';
+import '@/assets/experience-stylesheet.css';
 // import HomeLogo from '/public/svg/icons8-home-100.svg'
 
 // import CursorFollower from '@/components/CursorBubble.vue';
