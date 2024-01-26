@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from 'vue';
+// const pdfPath_42DIGITAL = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_Reference_42DIGITAL.pdf';
+const pdfPath_GreenPocket = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_Reference_GreenPocket.pdf';
+
+
 
 const hoveredElement = ref(false);
 
@@ -38,7 +42,14 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Fullstack Engineer · 42DIGITAL</span>
+              <span class="experience-position">Fullstack Engineer · 42DIGITAL
+                <!-- <a class="pdf-reference"
+                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
+                <span class="material-symbols-rounded">
+                  article_shortcut
+                </span>
+                 </a> -->
+              </span>
               <p>Bachelor Thesis</p>
             </div>
             <p class="experience-info">During my bachelor thesis at 42DIGITAL, I was in charge of creating a customer
@@ -48,6 +59,10 @@ const unsetHovered = () => {
               providing
               several AI-powered applications.</p>
             <div class="technologies">
+              <span class="technology">JavaScript</span>
+              <span class="technology">HTML</span>
+              <span class="technology">CSS</span>
+              <span class="technology">React</span>
               <span class="technology">Next.js</span>
               <span class="technology">Django</span>
               <span class="technology">Firebase</span>
@@ -64,11 +79,15 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Data Science & Strategy · GreenPocket</span>
+              <span class="experience-position">Data Science & Strategy · GreenPocket<a class="pdf-reference"
+                  :href="pdfPath_GreenPocket" download="Reference_GreenPocket.pdf"><span class="material-symbols-rounded">
+                    article_shortcut
+                  </span></a></span>
               <p>Internship</p>
             </div>
             <p class="experience-info">As part of my bachelor's degree program, I completed a 6-month internship.
-              During this time, my work within the scope of the "Einspahrzählerprojekt" was able to predict six-figure
+              During this time, my work within the scope of the 'Baseline-Generator'-Project was able to predict
+              six-figure
               revenue amounts for the company and demonstrably improve the performance of the utilized forecasting model
               through parameter tuning. This experience, coupled with some of the courses I attended, gave me the
               opportunity
@@ -88,10 +107,17 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Data Engineer · 42DIGITAL</span>
+              <span class="experience-position">Data Engineer · 42DIGITAL
+                <!-- <a class="pdf-reference"
+                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
+                <span class="material-symbols-rounded">
+                  article_shortcut
+                </span>
+                 </a> -->
+              </span>
               <p>Working Student</p>
             </div>
-            <p class="experience-info">In my first job in the IT industry, I began as a working student at 42DIGITAL,
+            <p class="experience-info">At my first job in the IT industry, I began as a working student at 42DIGITAL,
               where I supported the daily work of the Data & AI team. I was responsible for numerous ETL processes, cloud
               functions and integrations, as well as data visualization for B2B clients. Here, I gained initial experience
               with Google Cloud and its functions, while also learning to create efficient SQL queries and data pipelines.
