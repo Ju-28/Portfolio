@@ -19,6 +19,7 @@
     "smooth-scrollbar": "^8.8.4",
     "three": "^0.134.0",
     "typeit": "^8.8.0",
+    "vitepress": "^1.0.0-beta.6",
     "vue": "^3.3.9",
     "vue-router": "^4.2.5"
   },
