@@ -1,0 +1,142 @@
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1400px;
+  align-items: flex-start;
+  margin-left: 10rem;
+  position: relative;
+  overflow: visible;
+}
+
+.experience-wrapper {
+  display: flex;
+  flex-direction: row;
+  color: #cdd7f7;
+  justify-content: space-between;
+  font-family: 'Nunito Sans', sans-serif;
+  padding-bottom: 5rem;
+}
+
+.experience-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  filter: drop-shadow(0 5px 5px #010f23);
+  box-shadow: 0 0 20px 0 #010f2315;
+  border-radius: 10px;
+  backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.075);
+  min-height: 300px;
+  position: fixed;
+}
+
+.experience-headline {
+  display: flex;
+  line-height: 1;
+  gap: 1rem;
+  font-size: x-large;
+  min-width: 400px;
+}
+
+.experience-headline span {
+  position: relative;
+  top: 0;
+  right: 5px;
+}
+
+.experience-headline div {
+  align-self: center;
+  width: 40%;
+  height: 0;
+  border-bottom: solid 1px gray;
+}
+
+.experience-sub {
+  font-size: large;
+  line-height: 1;
+}
+
+.experience-intro {
+  max-width: 400px;
+  color: #8e92a0;
+}
+
+.experience-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 550px;
+  margin-left: 550px;
+  filter: drop-shadow(0 5px 5px #010f23);
+}
+
+.experience {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.experience:hover {
+  backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.048);
+}
+
+.experience:hover .experience-content span {
+  color: #4bc2bc;
+}
+
+.experience:has(+ .experience:hover),
+.experience:hover ~ .experience {
+  filter: opacity(0.5);
+}
+
+.experience-time {
+  font-size: 11px;
+  min-width: 120px;
+  color: #8e92a0;
+}
+
+.experience-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.experience-position {
+  font-size: large;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.experience-content div p {
+  font-size: large;
+  color: #8e92a0;
+}
+
+.experience-info {
+  color: #8e92a0;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology {
+  border-radius: 999px;
+  background-color: #4bc2bc74;
+  background-color: rgba(45, 212, 190, 0.148);
+  color: #4bc2bc;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+}

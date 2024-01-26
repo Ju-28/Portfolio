@@ -15,21 +15,6 @@
   border: 10px solid #010f23;
 }
 
-/* .cursor-bubble -> Small lense { 
-  height: 30px;
-  width: 30px;
-  transform: translate(-15px, -15px);
-  border-radius: 50%;
-  border: solid 1px rgba(255, 255, 255, 0.398);
-  background-color: rgba(255, 255, 255, 0.055);
-  box-shadow: 0 0 5px white, inset 0 0 5px white;
-  filter: blur(1px);
-  position: absolute;
-  z-index: 5000;
-  pointer-events: none;
-  backdrop-filter: blur(1px);
-} */
-
 .bubble-purple {
   height: 500px;
   width: 800px;
@@ -39,8 +24,9 @@
   box-shadow: 0 0 100px rgba(116, 0, 217, 0.692);
   position: fixed;
   filter: blur(7rem);
-  animation: movePurpleBubble 40s ease-in-out infinite;
+  animation: movePurpleBubble 40s 1.5s ease-in-out infinite;
   z-index: -1;
+  transform: translate(200px, 100px) scale(1);
 }
 
 .bubble-yellow {
@@ -52,7 +38,8 @@
   filter: blur(9rem);
   height: 800px;
   width: 500px;
-  animation: moveYellowBubble 55s ease-in-out infinite;
+  animation: moveYellowBubble 55s 1.5s ease-in-out infinite;
+  transform: translate(200px, 100px) scale(1);
   z-index: -1;
 }
 
@@ -65,8 +52,113 @@
   filter: blur(9rem);
   height: 700px;
   width: 200px;
-  animation: movePeachBubble 30s ease-in-out infinite;
+  animation: movePeachBubble 30s 1.5s ease-in-out infinite;
   z-index: -1;
+  transform: translate(600px, -150px) scale(1.2);
+}
+
+@keyframes movePeachBubble {
+  0%,
+  100% {
+    transform: translate(600px, -150px) scale(1.2);
+  }
+  10% {
+    transform: translate(400px, 0px) scale(1.2);
+  }
+  20% {
+    transform: translate(100px, 10px) scale(1.2);
+  }
+  30% {
+    transform: translate(-50px, -150px) scale(1.2);
+  }
+  40% {
+    transform: translate(-300px, 0px) scale(1.2);
+  }
+  50% {
+    width: 350px;
+    transform: translate(0px, 150px) rotate(120deg);
+  }
+  60% {
+    transform: translate(300px, 250px) scale(1.2);
+  }
+  70% {
+    transform: translate(600px, 400px) scale(1.2);
+  }
+  80% {
+    transform: translate(900px, 200px) scale(1.2);
+  }
+  90% {
+    width: 200px;
+    transform: translate(500px, 25px) rotate(-120deg);
+  }
+}
+
+@keyframes movePurpleBubble {
+  0%,
+  100% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  10% {
+    transform: translate(0px, 300px) rotate(30deg);
+  }
+  20% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  30% {
+    transform: translate(-400px, -100px) scale(1);
+  }
+  40% {
+    transform: translate(-200px, 100px);
+  }
+  50% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  60% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  70% {
+    transform: translate(400px, -100px) rotate(-30deg);
+  }
+  80% {
+    transform: translate(600px, 100px) scale(1);
+  }
+  90% {
+    transform: translate(400px, 300px) scale(1);
+  }
+}
+
+@keyframes moveYellowBubble {
+  0%,
+  100% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  10% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  20% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  30% {
+    transform: translate(-400px, -100px) scale(1);
+  }
+  40% {
+    transform: translate(-200px, 100px) scale(1);
+  }
+  50% {
+    transform: translate(0px, 300px) scale(1);
+  }
+  60% {
+    transform: translate(200px, 100px) scale(1);
+  }
+  70% {
+    transform: translate(400px, -100px) scale(1);
+  }
+  80% {
+    transform: translate(600px, 100px) scale(1);
+  }
+  90% {
+    transform: translate(400px, 300px) scale(1);
+  }
 }
 
 .material-symbols-outlined {

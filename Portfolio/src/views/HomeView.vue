@@ -86,7 +86,7 @@ const showSocials = () => {
 
     <div class="about-me-container" ref="aboutMeContainerRef">
       <div class="about-me-content">
-        <div class="about-me-left">
+        <div v-motion-slide-visible-left class="about-me-left">
           <div class="about-me-headline">
             <h2><span class="material-symbols-sharp"> add
               </span>About me</h2>
@@ -109,13 +109,14 @@ const showSocials = () => {
               own
               SaaS</span>.</p>
         </div>
-        <div class="about-me-right">
+        <div v-motion-slide-visible-right class="about-me-right">
           <div class="img-box"></div>
           <span class="click-me" @click="showSocials">
             Click me!
           </span>
-          <img :src="coloredImageSrc" @click="showSocials">
-          <img :src="blackAndWhiteImageSrc" class="img-bw" @click="showSocials">
+          <img :src="coloredImageSrc" @click="showSocials" :class="{ 'img-shake': isAnimationActive }">
+          <img :src="blackAndWhiteImageSrc" class="img-bw" @click="showSocials"
+            :class="{ 'img-shake': isAnimationActive }">
           <a href="https://www.instagram.com/julius_blr/" target="blank" class="social social-1"
             :class="{ 'social-show-1': isAnimationActive, 'social-hide-1': !isAnimationActive }"><svg
               xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256">
@@ -209,7 +210,7 @@ const showSocials = () => {
       </div>
       <div class="scroll-to-contact" @click="formScroll">Contact me!</div>
     </div>
-    <div class="contact-wrapper" ref="contactWrapperRef">
+    <div v-motion-pop-visible class="contact-wrapper" ref="contactWrapperRef">
       <ContactForm :class="{ 'formFadeIn': !showForm, 'formFadeOut': showForm }" class="contactForm" ref="contactForm" />
     </div>
   </main>
