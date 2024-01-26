@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     assetsDir: 'assets',
     rollupOptions: {
-      external: ['@vueuse/motion']
+      external: ['./node_modules/@vueuse/motion']
     }
   },
   optimizeDeps: {
