@@ -541,13 +541,14 @@
   }
 
   .about-me-right {
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
   }
 
   .img-box {
     height: 250px;
     width: 250px;
-    left: 50px;
+    top: 50px;
+    left: 40px;
   }
 
   .about-me-right img {
@@ -567,14 +568,14 @@
     }
     to {
       opacity: 1;
-      transform: translate(145px, 35px);
+      transform: translate(60px, 132px);
     }
   }
 
   @keyframes social-hide-1 {
     from {
       opacity: 1;
-      transform: translate(145px, 35px);
+      transform: translate(60px, 132px);
     }
     to {
       opacity: 0;
@@ -589,14 +590,14 @@
     }
     to {
       opacity: 1;
-      transform: translate(125px, 115px);
+      transform: translate(-20px, 132px);
     }
   }
 
   @keyframes social-hide-2 {
     from {
       opacity: 1;
-      transform: translate(125px, 115px);
+      transform: translate(-20px, 132px);
     }
     to {
       opacity: 0;
@@ -611,14 +612,14 @@
     }
     to {
       opacity: 1;
-      transform: translate(55px, 125px);
+      transform: translate(-100px, 135px);
     }
   }
 
   @keyframes social-hide-3 {
     from {
       opacity: 1;
-      transform: translate(55px, 125px);
+      transform: translate(-100px, 135px);
     }
     to {
       opacity: 0;
