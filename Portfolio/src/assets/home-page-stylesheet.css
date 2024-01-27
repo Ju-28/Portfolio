@@ -167,12 +167,13 @@
   filter: drop-shadow(0 5px 5px #010f23);
   box-shadow: 0 0 20px 0 #010f2315;
   border-radius: 10px;
-  backdrop-filter: blur(05rem);
+  backdrop-filter: blur(5rem);
   background-color: rgba(255, 255, 255, 0.075);
 }
 
 .about-me-left-inner {
   margin-block: 0.5rem;
+  gap: 1rem;
 }
 
 .about-me-left h2 {
@@ -522,7 +523,7 @@
   }
 
   .about-me-left {
-    max-height: 300px;
+    max-height: 320px;
     font-size: medium;
   }
 
