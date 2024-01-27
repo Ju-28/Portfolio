@@ -443,6 +443,7 @@ a {
     max-width: 100%;
     flex-direction: column;
     margin: 0;
+    height: 100vh;
   }
 
   .right-navbar {
