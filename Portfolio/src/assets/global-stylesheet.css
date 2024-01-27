@@ -18,10 +18,10 @@
 .bubble-purple {
   height: 500px;
   width: 800px;
-  background-color: rgba(116, 0, 217, 0.692);
+  background-color: rgba(116, 0, 217, 0.4592);
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 100px rgba(116, 0, 217, 0.692);
+  box-shadow: 0 0 100px rgba(116, 0, 217, 0.4592);
   position: fixed;
   filter: blur(7rem);
   animation: movePurpleBubble 40s 1.5s ease-in-out infinite;
@@ -30,10 +30,10 @@
 }
 
 .bubble-yellow {
-  background-color: rgba(193, 143, 4, 0.692);
+  background-color: rgba(193, 143, 4, 0.4592);
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 100px rgba(193, 143, 4, 0.692);
+  box-shadow: 0 0 100px rgba(193, 143, 4, 0.4592);
   position: fixed;
   filter: blur(9rem);
   height: 800px;
@@ -167,7 +167,7 @@
     'wght' 400,
     'GRAD' 0,
     'opsz' 24;
-  line-height: 0.2;
+  line-height: 0.45;
   padding: 0;
   margin: 0;
   transform: translateX(0.3rem) translateY(0.5rem);
@@ -187,7 +187,7 @@
   cursor: pointer;
   font-family: 'Sometype Mono', monospace;
   z-index: 1;
-  backdrop-filter: blur(0.2rem);
+  backdrop-filter: blur(0.45rem);
 }
 
 .scroll-to-top span {
@@ -317,7 +317,7 @@ a {
   transition: all 0.3s ease;
   cursor: pointer;
   z-index: 3;
-  animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
+  animation: SlideIn 1.2s cubic-bezier(0.453, 0.74, 0.657, 0.99) forwards;
   animation-delay: 2s;
   pointer-events: all;
 }
@@ -345,7 +345,7 @@ a {
   border-radius: 8px;
   color: #4bc2bc;
   transition: all 0.3s ease;
-  animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
+  animation: SlideIn 1.2s cubic-bezier(0.453, 0.74, 0.657, 0.99) forwards;
   pointer-events: all;
 }
 
@@ -359,14 +359,114 @@ a {
   .navbar,
   header {
     display: none;
-    /* max-width: 100%;
-    margin-inline: 0;
-    padding-inline: 0;
-    justify-content: center; */
   }
 
   .inner-navbar {
     justify-content: center;
     max-width: 100%;
+  }
+
+  @keyframes movePeachBubble {
+    0%,
+    100% {
+      transform: translate(600px, -150px) scale(0.65);
+    }
+    10% {
+      transform: translate(400px, 0px) scale(0.65);
+    }
+    20% {
+      transform: translate(100px, 10px) scale(0.65);
+    }
+    30% {
+      transform: translate(-50px, -150px) scale(0.65);
+    }
+    40% {
+      transform: translate(-300px, 0px) scale(0.65);
+    }
+    50% {
+      width: 140px; /* Adjusted width */
+      transform: translate(0px, 60px) rotate(120deg) scale(0.65);
+    }
+    60% {
+      transform: translate(120px, 200px) scale(0.65);
+    }
+    70% {
+      transform: translate(240px, 320px) scale(0.65);
+    }
+    80% {
+      transform: translate(360px, 160px) scale(0.65);
+    }
+    90% {
+      width: 80px; /* Adjusted width */
+      transform: translate(200px, 20px) rotate(-120deg) scale(0.65);
+    }
+  }
+
+  @keyframes movePurpleBubble {
+    0%,
+    100% {
+      transform: translate(160px, 80px) scale(0.45);
+    }
+    10% {
+      transform: translate(0px, 240px) rotate(30deg) scale(0.45);
+    }
+    20% {
+      transform: translate(-160px, 80px) scale(0.45);
+    }
+    30% {
+      transform: translate(-320px, -80px) scale(0.45);
+    }
+    40% {
+      transform: translate(-160px, 80px) scale(0.45);
+    }
+    50% {
+      transform: translate(0px, 240px) scale(0.45);
+    }
+    60% {
+      transform: translate(160px, 80px) scale(0.45);
+    }
+    70% {
+      transform: translate(320px, -80px) rotate(-30deg) scale(0.45);
+    }
+    80% {
+      transform: translate(480px, 80px) scale(0.45);
+    }
+    90% {
+      transform: translate(320px, 240px) scale(0.45);
+    }
+  }
+
+  @keyframes moveYellowBubble {
+    0%,
+    100% {
+      transform: translate(160px, 80px) scale(0.45);
+    }
+    10% {
+      transform: translate(0px, 240px) scale(0.45);
+    }
+    20% {
+      transform: translate(-160px, 80px) scale(0.45);
+    }
+    30% {
+      transform: translate(-320px, -80px) scale(0.45);
+    }
+    40% {
+      transform: translate(-160px, 80px) scale(0.45);
+    }
+    50% {
+      transform: translate(0px, 240px) scale(0.45);
+    }
+    60% {
+      transform: translate(160px, 80px) scale(0.45);
+    }
+    70% {
+      transform: translate(320px, -80px) scale(0.45);
+    }
+    80% {
+      transform: translate(480px, 80px) scale(0.45);
+    }
+    90% {
+      transform: translate(320px, 240px) scale(0.45);
+    }
   }
 }
