@@ -61,9 +61,6 @@ const scrollToAboutMe = () => {
   }
 };
 
-// Add an event listener to recalculate the offset when the window is resized
-window.addEventListener('resize', scrollToAboutMe);
-
 const isAnimationActive = ref(false);
 
 const showSocials = () => {
