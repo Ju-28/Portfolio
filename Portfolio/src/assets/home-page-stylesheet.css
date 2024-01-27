@@ -3,9 +3,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-width: 1400px;
-  align-items: flex-start;
-  margin-left: 10rem;
   position: relative;
   overflow: visible;
 }
@@ -40,7 +37,7 @@
   font-family: 'Nunito Sans', sans-serif;
   gap: 1rem;
   animation: SlideIn 1.2s cubic-bezier(0.23, 0.74, 0.47, 0.99) forwards;
-  min-width: 1100px;
+  /* min-width: 1100px; */
   height: 100svh;
 }
 
@@ -125,11 +122,11 @@
   display: flex;
   flex-direction: column;
   font-family: 'Nunito Sans', sans-serif;
-  width: 40%;
+  width: 66%;
   gap: 4rem;
-  margin-left: 8rem;
   height: 100svh;
   margin-bottom: 3rem;
+  align-items: center;
 }
 
 .about-me-content {
@@ -163,7 +160,8 @@
   color: #8e92a0;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  max-width: 350px;
+  max-height: 600px;
   gap: 1rem;
   padding: 1rem;
   filter: drop-shadow(0 5px 5px #010f23);
@@ -171,6 +169,10 @@
   border-radius: 10px;
   backdrop-filter: blur(05rem);
   background-color: rgba(255, 255, 255, 0.075);
+}
+
+.about-me-left-inner {
+  margin-block: 0.5rem;
 }
 
 .about-me-left h2 {
@@ -185,10 +187,10 @@
 .img-box {
   border: 3px solid #4bc2bc;
   border-radius: 15px;
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: 80px;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  top: 60px;
   left: 30px;
   background-color: transparent;
 }
@@ -196,8 +198,8 @@
 .click-me {
   position: absolute;
   color: rgb(163, 163, 163);
-  bottom: 130px;
-  left: 125px;
+  bottom: 125px;
+  left: 150px;
   width: 90px;
   cursor: pointer;
   z-index: 3;
@@ -206,10 +208,10 @@
 
 .about-me-right img {
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 0;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 15px;
   cursor: pointer;
@@ -311,14 +313,14 @@
   }
   to {
     opacity: 1;
-    transform: translate(185px, 110px);
+    transform: translate(235px, 145px);
   }
 }
 
 @keyframes social-hide-1 {
   from {
     opacity: 1;
-    transform: translate(185px, 110px);
+    transform: translate(235px, 145px);
   }
   to {
     opacity: 0;
@@ -333,14 +335,14 @@
   }
   to {
     opacity: 1;
-    transform: translate(170px, 180px);
+    transform: translate(220px, 225px);
   }
 }
 
 @keyframes social-hide-2 {
   from {
     opacity: 1;
-    transform: translate(170px, 180px);
+    transform: translate(220px, 225px);
   }
   to {
     opacity: 0;
@@ -355,14 +357,14 @@
   }
   to {
     opacity: 1;
-    transform: translate(100px, 200px);
+    transform: translate(145px, 235px);
   }
 }
 
 @keyframes social-hide-3 {
   from {
     opacity: 1;
-    transform: translate(100px, 200px);
+    transform: translate(145px, 235px);
   }
   to {
     opacity: 0;
@@ -382,7 +384,6 @@
   cursor: pointer;
   width: fit-content;
   font-family: 'Sometype Mono', monospace;
-  margin-left: 21.5rem;
   z-index: 1;
 }
 
@@ -426,4 +427,206 @@
   background-color: #4bc2bc;
   color: #010f23;
   transform: scale(0.95);
+}
+
+@media screen and (max-width: 1190px) {
+  .about-me-container {
+    gap: 4rem;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-me-left {
+    font-size: 1.4rem;
+    height: fit-content;
+    overflow: hidden;
+    max-width: 400px;
+  }
+
+  .about-me-left-inner {
+    overflow: scroll;
+  }
+
+  .click-me {
+    bottom: 0;
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .personal-wrapper {
+    max-width: 850px;
+    width: fit-content;
+    margin-inline: 2rem;
+    align-self: center;
+    font-size: 1.2rem;
+  }
+  .name,
+  .job {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .home-page {
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .personal-wrapper {
+    margin-top: 6em;
+    max-width: 600px;
+    height: 100svh;
+    font-size: 1.4rem;
+    align-items: center;
+    text-align: center;
+    margin-inline: 2rem;
+  }
+
+  .introduction {
+    align-self: flex-start;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .job {
+    font-size: 2.3rem;
+    text-align: left;
+  }
+
+  .name {
+    font-size: 2.3rem;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .story {
+    max-width: 400px;
+    font-size: smaller;
+  }
+
+  .more-buttons {
+    font-size: small;
+    max-width: 400px;
+  }
+
+  .about-me-container {
+    width: 100%;
+    padding-inline: 2rem;
+    min-height: 100svh;
+    margin-bottom: 8rem;
+  }
+
+  .about-me-left {
+    max-height: 300px;
+    font-size: medium;
+  }
+
+  .about-me-headline {
+    font-size: 1rem;
+  }
+
+  .about-me-h-line {
+    width: 35%;
+  }
+
+  .about-me-left-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-me-right {
+    margin-bottom: 3rem;
+  }
+
+  .img-box {
+    height: 250px;
+    width: 250px;
+    left: 50px;
+  }
+
+  .about-me-right img {
+    height: 250px;
+    width: 250px;
+    left: 20px;
+  }
+
+  .click-me {
+    left: 120px;
+  }
+
+  @keyframes social-show-1 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(145px, 35px);
+    }
+  }
+
+  @keyframes social-hide-1 {
+    from {
+      opacity: 1;
+      transform: translate(145px, 35px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-2 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(125px, 115px);
+    }
+  }
+
+  @keyframes social-hide-2 {
+    from {
+      opacity: 1;
+      transform: translate(125px, 115px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-3 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(55px, 125px);
+    }
+  }
+
+  @keyframes social-hide-3 {
+    from {
+      opacity: 1;
+      transform: translate(55px, 125px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  .contact-wrapper {
+    min-height: 100svh;
+  }
 }
