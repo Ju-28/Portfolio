@@ -251,12 +251,13 @@ a {
 }
 
 .bar {
-  width: 3rem;
   height: 0.2rem;
   margin: 1rem;
   color: black;
-  background-color: rgb(255, 255, 255);
+  background-color: #4bc2bc;
   transition: 0.4s;
+  width: 3rem;
+  backdrop-filter: blur(0.1rem);
 }
 
 .burger-menu {
@@ -277,6 +278,7 @@ a {
 
 .navbar.visible {
   display: flex;
+  position: fixed;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -301,6 +303,7 @@ a {
 
 .inner-nav.visible {
   display: flex;
+  position: fixed;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -414,6 +417,7 @@ a {
   }
 
   .navbar {
+    position: fixed;
     flex-direction: column;
     pointer-events: all;
     display: none;
@@ -434,6 +438,7 @@ a {
   }
 
   .inner-nav {
+    position: fixed;
     justify-content: center;
     max-width: 100%;
     flex-direction: column;

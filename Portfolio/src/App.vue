@@ -34,6 +34,14 @@ const toggleMobileMenu = () => {
   document.querySelector('.navbar').classList.toggle('visible');
 };
 
+const closeMobileNav = () => {
+  state.width.value = window.innerWidth;
+  if (state.width.value <= 1000) {
+    showMobileMenu.value = !showMobileMenu.value;
+    document.querySelector('.navbar').classList.toggle('visible');
+  }
+}
+
 onMounted(() => {
 
   window.addEventListener('resize', handleResize);
@@ -106,17 +114,19 @@ onBeforeUnmount(() => {
         <div class="inner-nav">
           <div class="left-navbar" ref="leftNavbar">
             <ul>
-              <RouterLink @click="scrollToTop" :to="item.to" class="navbar-item" v-for="(item, index) in leftNavbarItems"
-                :key="index" :style="{ 'animation-delay': `${index * 0.2}s` }"><span class="material-symbols-outlined"
-                  style="transform: scale(1.8);">
+              <RouterLink @click="scrollToTop(); closeMobileNav();" :to="item.to" class="navbar-item"
+                v-for="(item, index) in leftNavbarItems" :key="index" :style="{ 'animation-delay': `${index * 0.2}s` }">
+                <span class="material-symbols-outlined" style="transform: scale(1.8);">
                   home_app_logo
-                </span></RouterLink>
+                </span>
+              </RouterLink>
             </ul>
           </div>
           <div class="right-navbar" ref="rightNavbar">
             <ul>
               <router-link v-for="(item, index) in rightNavbarItems" :to="item.to" class="navbar-item" :key="index"
-                :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }">{{ item.label
+                :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }" @click="closeMobileNav">{{
+                  item.label
                 }}</router-link>
               <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf"
                 :style="{ 'animation-delay': `${(leftNavbarItems.length + rightNavbarItems.length) * 0.2}s` }">Resume<span
