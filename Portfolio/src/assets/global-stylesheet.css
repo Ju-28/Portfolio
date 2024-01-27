@@ -428,7 +428,7 @@ a {
     background-color: #010f23;
     justify-content: center;
     position: fixed;
-    height: 100svh;
+    height: 100vh;
     opacity: 0;
     animation: appear 0.4s ease-in forwards;
   }
