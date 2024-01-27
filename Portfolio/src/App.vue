@@ -12,8 +12,41 @@ import { init } from 'emailjs-com';
 
 const pdfPath = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_CV.pdf';
 
-const isNavbarVisible = ref(false);
+const isNavbarLoaded = ref(false);
 const scrollPosition = ref(0);
+const showMobileMenu = ref(false);
+
+const state = {
+  showMobileMenu: ref(false),
+  width: ref(window.innerWidth),
+};
+
+const handleResize = () => {
+  state.width.value = window.innerWidth;
+  if (state.width.value >= 1500) {
+    state.showMobileMenu.value = false;
+    document.querySelector('.navbar').classList.remove('visible');
+  }
+};
+
+const toggleMobileMenu = () => {
+  showMobileMenu.value = !showMobileMenu.value;
+  document.querySelector('.navbar').classList.toggle('visible');
+};
+
+onMounted(() => {
+
+  window.addEventListener('resize', handleResize);
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.burger-menu') && state.showMobileMenu.value) {
+      state.showMobileMenu.value = false;
+    }
+  });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize);
+});
 
 const leftNavbarItems = [
   { label: 'Home', to: '/' }
@@ -28,7 +61,7 @@ const rightNavbarItems = [
 onMounted(() => {
   // Show the navbar after a delay
   setTimeout(() => {
-    isNavbarVisible.value = true;
+    isNavbarLoaded.value = true;
   }, 500);
   init();
 });
@@ -60,12 +93,16 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<template>
+<template v-if="$width < 1000">
   <!-- <CursorFollower /> -->
   <main class="landing-page">
     <header>
-      <div class="blur"></div>
-      <nav class="navbar" v-if="isNavbarVisible">
+      <div class="burger-menu" @click="toggleMobileMenu" :class="{ 'open': showMobileMenu }">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+      <nav class="navbar" v-if="isNavbarLoaded" v-bind:class="{ 'visible': showMobileMenu }">
         <div class="inner-nav">
           <div class="left-navbar" ref="leftNavbar">
             <ul>

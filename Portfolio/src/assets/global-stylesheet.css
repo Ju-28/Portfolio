@@ -250,13 +250,40 @@ a {
   word-spacing: -0.3rem;
 }
 
-/* .blur {
+.bar {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 1rem;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu.open .bar1 {
+  transform: rotate(-45deg) translate(-15px, 12px);
+}
+
+.burger-menu.open .bar2 {
+  opacity: 0;
+}
+
+.burger-menu.open .bar3 {
+  transform: rotate(45deg) translate(-15px, -12px);
+}
+
+.navbar.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
   background-color: transparent;
-  backdrop-filter: blur(1rem);
-  height: 100px;
-  width: 2000px;
-  position: fixed;
-} */
+  z-index: 200;
+  text-align: center;
+}
 
 .navbar {
   background: linear-gradient(to bottom, #010f23, transparent);
@@ -270,6 +297,16 @@ a {
   pointer-events: none;
   position: fixed;
   padding-inline: 1rem;
+}
+
+.inner-nav.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color: transparent;
+  z-index: 200;
+  text-align: center;
 }
 
 .inner-nav {
@@ -298,10 +335,6 @@ a {
 .left-navbar .navbar-item:hover {
   text-shadow: 0 0 10px #4bc2bc;
 }
-
-/* .right-navbar {
-    padding-right: 1rem;
-  } */
 
 .right-navbar ul {
   list-style: none;
@@ -338,6 +371,21 @@ a {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
 .pdf-button {
   opacity: 0;
   padding: 1rem;
@@ -355,17 +403,72 @@ a {
   color: #010f23;
 }
 
-@media screen and (max-width: 650px) {
-  .navbar,
-  header {
+@media screen and (max-width: 1000px) {
+  .burger-menu {
+    display: block;
+    position: fixed;
+    right: 0;
+    background-color: transparent;
+    margin-top: 1rem;
+    z-index: 9999;
+  }
+
+  .navbar {
+    flex-direction: column;
+    pointer-events: all;
     display: none;
   }
 
-  .inner-navbar {
+  .navbar.visible {
+    display: flex;
+    background-color: #010f23;
     justify-content: center;
-    max-width: 100%;
+    position: fixed;
+    height: 100svh;
+    opacity: 0;
+    animation: appear 0.4s ease-in forwards;
   }
 
+  .navbar-item {
+    animation: fadeIn 0.05s ease-in forwards;
+  }
+
+  .inner-nav {
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .right-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .left-navbar {
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  .left-navbar ul {
+    justify-content: center;
+  }
+
+  .pdf-button {
+    animation: fadeIn 0.05s ease-in forwards;
+  }
+
+  .right-navbar ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 650px) {
   @keyframes movePeachBubble {
     0%,
     100% {
