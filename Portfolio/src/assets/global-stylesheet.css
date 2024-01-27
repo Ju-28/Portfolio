@@ -269,7 +269,7 @@ a {
   width: 100%;
   pointer-events: none;
   position: fixed;
-  /* backdrop-filter: blur(0.1rem); */
+  padding-inline: 1rem;
 }
 
 .inner-nav {
@@ -299,9 +299,9 @@ a {
   text-shadow: 0 0 10px #4bc2bc;
 }
 
-.right-navbar {
-  padding-right: 1rem;
-}
+/* .right-navbar {
+    padding-right: 1rem;
+  } */
 
 .right-navbar ul {
   list-style: none;
@@ -353,4 +353,20 @@ a {
   box-shadow: 0 0 10px 0 #4bc2bc;
   background-color: #4bc2bc;
   color: #010f23;
+}
+
+@media screen and (max-width: 650px) {
+  .navbar,
+  header {
+    display: none;
+    /* max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    justify-content: center; */
+  }
+
+  .inner-navbar {
+    justify-content: center;
+    max-width: 100%;
+  }
 }

@@ -4,7 +4,6 @@
   display: flex;
   align-items: flex-start;
   filter: drop-shadow(0 -2px 3px #010f23);
-  margin-left: 4rem;
   align-self: center;
 }
 
@@ -22,7 +21,7 @@
 .form-inputs {
   display: flex;
   flex-direction: row;
-  gap: 20rem;
+  gap: 5rem;
 }
 
 .form-left {
@@ -42,7 +41,7 @@
 .input-container {
   height: 50px;
   position: relative;
-  width: 200%;
+  min-width: 400px;
 }
 
 .ic1 {
@@ -164,10 +163,9 @@
 
 .submit {
   margin-top: 2.5rem;
-  padding: 1rem;
+  padding-block: 1rem;
+  padding-inline: 3rem;
   border: solid 2px #4bc2bc;
-  width: 200%;
-  transform: translateX(4.25rem);
   border-radius: 8px;
   color: #4bc2bc;
   transition: all 0.3s ease;
@@ -187,4 +185,26 @@
   background-color: #358884;
   border: solid 2px #358884;
   color: #022c66;
+}
+
+@media screen and (max-width: 650px) {
+  .form-container {
+    padding-inline: 1rem;
+    min-height: 100svh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    gap: 11rem;
+  }
+
+  .form-inputs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .input-container {
+    min-width: 280px;
+  }
 }

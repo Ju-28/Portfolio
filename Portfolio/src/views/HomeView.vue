@@ -44,7 +44,14 @@ function formScroll() {
 
 const scrollToAboutMe = () => {
   if (aboutMeContainerRef.value) {
-    const offset = 50; // Adjust this value to control how much less it should scroll
+    let offset = 50; // Default offset value
+
+    // Check if the window width is less than or equal to 650px
+    if (window.innerWidth <= 650) {
+      // Adjust the offset for smaller screens
+      offset = -100; // You can set any value suitable for smaller screens
+    }
+
     const targetScrollPosition = aboutMeContainerRef.value.offsetTop + offset;
 
     window.scrollTo({
@@ -53,6 +60,9 @@ const scrollToAboutMe = () => {
     });
   }
 };
+
+// Add an event listener to recalculate the offset when the window is resized
+window.addEventListener('resize', scrollToAboutMe);
 
 const isAnimationActive = ref(false);
 
@@ -86,30 +96,32 @@ const showSocials = () => {
 
     <div class="about-me-container" ref="aboutMeContainerRef">
       <div class="about-me-content">
-        <div v-motion-slide-visible-left class="about-me-left">
+        <div v-motion-pop-visible class="about-me-left">
           <div class="about-me-headline">
             <h2><span class="material-symbols-sharp"> add
               </span>About me</h2>
             <div class="about-me-h-line"></div>
           </div>
-          <p>I am a 24 year old fullstack engineer with backgrounds in computer science and data. I love working goal
-            oriented
-            together with like-minded people, while also trying to find my own way. Having a background in
-            communications
-            also really helps me to accomplish things in groups.</p>
-          <p>
-            Coming up with new ideas and bringing them into reality is the foundation of my motivation, while I always
-            try
-            to learn
-            new things each time. If there is a problem, I want to solve it.
-          </p>
-          <p>This wide range of skills already allowed me to be part of an <span class="highlighted">online marketing
-              agency</span>, <span class="highlighted">a green energy tech start-up</span> and <span
-              class="highlighted">my
-              own
-              SaaS</span>.</p>
+          <div class="about-me-left-inner">
+            <p>I am a 24 year old fullstack engineer with backgrounds in computer science and data. I love working goal
+              oriented
+              together with like-minded people, while also trying to find my own way. Having a background in
+              communications
+              also really helps me to accomplish things in groups.</p>
+            <p>
+              Coming up with new ideas and bringing them into reality is the foundation of my motivation, while I always
+              try
+              to learn
+              new things each time. If there is a problem, I want to solve it.
+            </p>
+            <p>This wide range of skills already allowed me to be part of an <span class="highlighted">online marketing
+                agency</span>, <span class="highlighted">a green energy tech start-up</span> and <span
+                class="highlighted">my
+                own
+                SaaS</span>.</p>
+          </div>
         </div>
-        <div v-motion-slide-visible-right class="about-me-right">
+        <div v-motion-pop-visible class="about-me-right">
           <div class="img-box"></div>
           <span class="click-me" @click="showSocials">
             Click me!
