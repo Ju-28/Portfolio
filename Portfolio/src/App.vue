@@ -10,7 +10,7 @@ import '@/assets/experience-stylesheet.css';
 // import CursorFollower from '@/components/CursorBubble.vue';
 import { init } from 'emailjs-com';
 
-const pdfPath = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_CV.pdf';
+const pdfPath = import.meta.env.BASE_URL + './public/downloads/Julius_Buller_CV.pdf';
 
 const isNavbarLoaded = ref(false);
 const scrollPosition = ref(0);

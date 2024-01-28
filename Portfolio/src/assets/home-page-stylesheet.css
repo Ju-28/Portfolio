@@ -479,6 +479,7 @@
   }
 
   .personal-wrapper {
+    top: 0;
     max-width: 600px;
     height: 100svh;
     font-size: 1.4rem;
