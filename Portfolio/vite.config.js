@@ -12,7 +12,7 @@ export default defineConfig({
     }
   },
   build: {
-    assetsDir: 'assets',
+    assetsDir: 'public',
     rollupOptions: {
       external: ['./node_modules/@vueuse/motion']
     }
