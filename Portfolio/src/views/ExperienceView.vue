@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 // const pdfPath_42DIGITAL = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_Reference_42DIGITAL.pdf';
-const pdfPath_GreenPocket = import.meta.env.BASE_URL + './public/downloads/Julius_Buller_Reference_GreenPocket.pdf';
+const pdfPath_GreenPocket = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_Reference_GreenPocket.pdf';
 
 
 
