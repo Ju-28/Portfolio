@@ -5,7 +5,7 @@
   align-items: center;
   max-width: 1400px;
   align-items: center;
-  margin-top: 7rem;
+  margin-top: 10rem;
   position: relative;
 }
 
@@ -201,7 +201,7 @@
   }
 
   .experience-right {
-    box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+    /* box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4); */
     flex-direction: row;
     overflow-y: scroll;
     margin: 0;
@@ -235,6 +235,7 @@
   .experience-page {
     max-width: 300px;
     align-self: center;
+    margin-top: 7rem;
   }
 
   .experience-wrapper {
@@ -268,7 +269,6 @@
   }
 
   .experience-right {
-    /* justify-content: flex-start; */
     flex-direction: row;
     max-width: 350px;
     overflow-y: scroll;

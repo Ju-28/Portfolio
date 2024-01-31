@@ -187,7 +187,7 @@
   color: #022c66;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   .form-container {
     padding-inline: 1rem;
     min-height: fit-content;
