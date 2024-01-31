@@ -76,14 +76,14 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Data Science & Strategy · Unternehmen<a class="pdf-reference"
-                  :href="pdfPath_GreenPocket" download="Reference_GreenPocket.pdf"><span class="material-symbols-rounded">
+              <span class="experience-position">Data Science & Strategy · Unternehmen<a class="pdf-reference"><span
+                    class="material-symbols-rounded">
                     article_shortcut
                   </span></a></span>
               <p>Internship</p>
             </div>
             <p class="experience-info">As part of my bachelor's degree, I completed a 6-month internship.
-              During this time, my work within the scope of the 'Pojektname'-Project was able to predict
+              During this time, my work within the scope of the 'Projektname'-Project was able to predict
               six-figure
               saving amounts for the company's clients and demonstrably improve the performance of the utilized
               forecasting model
