@@ -102,7 +102,7 @@ const showSocials = () => {
           <div class="about-me-left-inner">
             <p>I am a 24 year old fullstack engineer with backgrounds in computer science and data. I love working goal
               oriented
-              together with like-minded people, while also trying to find my own way. Having a background in
+              together with like-minded people, while also trying to find my own path. Having a background in
               communications
               also really helps me to accomplish things in groups.</p>
             <p>

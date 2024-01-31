@@ -5,7 +5,7 @@
   align-items: center;
   position: relative;
   overflow: visible;
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
 @keyframes SlideIn {
@@ -434,7 +434,7 @@
 
 @media screen and (max-width: 1190px) {
   .about-me-container {
-    gap: 4rem;
+    gap: 11rem;
   }
 
   .about-me-content {
@@ -457,6 +457,175 @@
     bottom: 0;
     left: 150px;
   }
+
+  @keyframes social-show-1 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(80px, 232px);
+    }
+  }
+
+  @keyframes social-hide-1 {
+    from {
+      opacity: 1;
+      transform: translate(80px, 232px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-2 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px, 232px);
+    }
+  }
+
+  @keyframes social-hide-2 {
+    from {
+      opacity: 1;
+      transform: translate(0px, 232px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-3 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-80px, 235px);
+    }
+  }
+
+  @keyframes social-hide-3 {
+    from {
+      opacity: 1;
+      transform: translate(-80px, 235px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 1185px) and (max-height: 830px) {
+  .about-me-container {
+    gap: 8rem;
+    margin-bottom: 0;
+  }
+  .about-me-content {
+    flex-direction: row;
+  }
+
+  .about-me-left {
+    font-size: medium;
+  }
+
+  .img-box {
+    height: 275px;
+    width: 275px;
+    top: 65px;
+    left: 30px;
+  }
+
+  .about-me-right img {
+    height: 275px;
+    width: 275px;
+    top: 35px;
+    left: 0;
+  }
+
+  .click-me {
+    bottom: 90px;
+    left: 115px;
+  }
+
+  .contact-wrapper {
+    padding-top: 0;
+  }
+
+  @keyframes social-show-1 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(175px, 85px);
+    }
+  }
+
+  @keyframes social-hide-1 {
+    from {
+      opacity: 1;
+      transform: translate(175px, 85px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-2 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(160px, 165px);
+    }
+  }
+
+  @keyframes social-hide-2 {
+    from {
+      opacity: 1;
+      transform: translate(160px, 165px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-3 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(85px, 175px);
+    }
+  }
+
+  @keyframes social-hide-3 {
+    from {
+      opacity: 1;
+      transform: translate(85px, 175px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -467,9 +636,102 @@
     align-self: center;
     font-size: 1.2rem;
   }
+
   .name,
   .job {
     font-size: 3rem;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+  }
+
+  .about-me-headline {
+    font-size: 1.2rem;
+  }
+
+  .img-box {
+    height: 250px;
+    width: 250px;
+    top: 50px;
+    left: 90px;
+  }
+
+  .about-me-right img {
+    height: 250px;
+    width: 250px;
+    left: 70px;
+  }
+
+  .click-me {
+    top: 230px;
+    left: 170px;
+  }
+
+  @keyframes social-show-1 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(110px, 132px);
+    }
+  }
+
+  @keyframes social-hide-1 {
+    from {
+      opacity: 1;
+      transform: translate(110px, 132px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-2 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(30px, 132px);
+    }
+  }
+
+  @keyframes social-hide-2 {
+    from {
+      opacity: 1;
+      transform: translate(30px, 132px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-3 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50px, 135px);
+    }
+  }
+
+  @keyframes social-hide-3 {
+    from {
+      opacity: 1;
+      transform: translate(-50px, 135px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
   }
 }
 
@@ -478,6 +740,7 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    margin-top: 7rem;
   }
 
   .personal-wrapper {
@@ -519,6 +782,7 @@
 
   .about-me-container {
     width: 100%;
+    gap: 3rem;
     padding-inline: 2rem;
     min-height: 100svh;
     margin-bottom: 8rem;
@@ -547,6 +811,100 @@
     margin-bottom: 7rem;
   }
 
+  .contact-wrapper {
+    height: fit-content;
+    padding: 0;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .img-box {
+    height: 250px;
+    width: 250px;
+    top: 50px;
+    left: 50px;
+  }
+
+  .about-me-right img {
+    height: 250px;
+    width: 250px;
+    left: 30px;
+  }
+
+  .click-me {
+    top: 230px;
+    left: 130px;
+  }
+
+  @keyframes social-show-1 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(70px, 132px);
+    }
+  }
+
+  @keyframes social-hide-1 {
+    from {
+      opacity: 1;
+      transform: translate(70px, 132px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-2 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-10px, 132px);
+    }
+  }
+
+  @keyframes social-hide-2 {
+    from {
+      opacity: 1;
+      transform: translate(-10px, 132px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes social-show-3 {
+    from {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-90px, 135px);
+    }
+  }
+
+  @keyframes social-hide-3 {
+    from {
+      opacity: 1;
+      transform: translate(-90px, 135px);
+    }
+    to {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
   .img-box {
     height: 250px;
     width: 250px;
@@ -561,9 +919,9 @@
   }
 
   .click-me {
+    top: 230px;
     left: 120px;
   }
-
   @keyframes social-show-1 {
     from {
       opacity: 0;
@@ -628,11 +986,5 @@
       opacity: 0;
       transform: translate(0, 0);
     }
-  }
-
-  .contact-wrapper {
-    height: fit-content;
-    padding: 0;
-    margin-top: 3rem;
   }
 }

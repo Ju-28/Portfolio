@@ -5,6 +5,7 @@ import ProjectsView from '../views/ProjectsView.vue'
 import ServicesView from '../views/ServicesView.vue'
 
 const router = createRouter({
+  linkExactActiveClass: 'is-active',
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -26,7 +27,7 @@ const router = createRouter({
       path: '/services',
       name: 'services',
       component: ServicesView
-    },
+    }
   ]
 })
 

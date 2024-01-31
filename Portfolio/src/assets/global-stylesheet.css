@@ -412,6 +412,11 @@ a {
   color: #010f23;
 }
 
+.router-link-active {
+  color: #4bc2bc;
+  text-shadow: 0 0 10px #4bc2bc;
+}
+
 @media screen and (max-width: 1135px) {
   header {
     height: 75px;

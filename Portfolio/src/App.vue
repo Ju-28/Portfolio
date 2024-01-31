@@ -36,7 +36,7 @@ const toggleMobileMenu = () => {
 
 const closeMobileNav = () => {
   state.width.value = window.innerWidth;
-  if (state.width.value <= 1000) {
+  if (state.width.value <= 1370) {
     if (showMobileMenu.value == true) {
       showMobileMenu.value = false;
       document.querySelector('.navbar').classList.toggle('visible');
