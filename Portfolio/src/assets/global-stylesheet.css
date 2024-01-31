@@ -233,6 +233,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10rem;
+  overflow-x: hidden;
+  /* align-items: center; */
 }
 
 ::selection {
@@ -434,7 +436,7 @@ a {
   }
 
   .navbar-item {
-    animation: fadeIn 0.05s ease-in forwards;
+    animation: fadeIn 0.8s ease-in forwards;
   }
 
   .inner-nav {
@@ -466,7 +468,7 @@ a {
   }
 
   .pdf-button {
-    animation: fadeIn 0.05s ease-in forwards;
+    animation: fadeIn 0.8s ease-in forwards;
   }
 
   .right-navbar ul {
