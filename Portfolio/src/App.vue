@@ -101,9 +101,15 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<template v-if="$width < 1000">
+<template v-if="$width < 1135">
   <main class="landing-page">
     <header>
+      <RouterLink @click="scrollToTop();" :to="item.to" class="home-button-mobile"
+        v-for="(item, index) in leftNavbarItems" :key="index" :style="{ 'animation-delay': `${index * 0.2}s` }">
+        <span class="material-symbols-outlined" style="transform: scale(1.8);">
+          home_app_logo
+        </span>
+      </RouterLink>
       <div class="burger-menu" @click="toggleMobileMenu" :class="{ 'open': showMobileMenu }">
         <div class="bar bar1"></div>
         <div class="bar bar2"></div>

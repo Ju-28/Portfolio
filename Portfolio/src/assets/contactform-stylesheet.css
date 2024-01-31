@@ -190,14 +190,14 @@
 @media screen and (max-width: 650px) {
   .form-container {
     padding-inline: 1rem;
-    min-height: 100svh;
-    align-items: center;
+    min-height: fit-content;
+    align-items: flex-start;
     justify-content: center;
   }
 
-  .form {
+  /* .form {
     gap: 11rem;
-  }
+  } */
 
   .form-inputs {
     flex-direction: column;
@@ -206,5 +206,9 @@
 
   .input-container {
     min-width: 280px;
+  }
+
+  .submit {
+    margin-top: 13rem;
   }
 }

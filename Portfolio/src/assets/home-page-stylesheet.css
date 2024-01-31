@@ -5,6 +5,7 @@
   align-items: center;
   position: relative;
   overflow: visible;
+  margin-top: 7rem;
 }
 
 @keyframes SlideIn {
@@ -629,6 +630,8 @@
   }
 
   .contact-wrapper {
-    min-height: 100svh;
+    height: fit-content;
+    padding: 0;
+    margin-top: 3rem;
   }
 }
