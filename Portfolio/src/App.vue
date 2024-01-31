@@ -132,7 +132,8 @@ onBeforeUnmount(() => {
           <div class="right-navbar" ref="rightNavbar">
             <ul>
               <router-link v-for="(item, index) in rightNavbarItems" :to="item.to" class="navbar-item" :key="index"
-                :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }" @click="closeMobileNav">{{
+                :style="{ 'animation-delay': `${(index + leftNavbarItems.length) * 0.2}s` }"
+                @click="scrollToTop(); closeMobileNav();">{{
                   item.label
                 }}</router-link>
               <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf"
