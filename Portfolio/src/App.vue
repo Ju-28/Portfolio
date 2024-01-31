@@ -37,8 +37,10 @@ const toggleMobileMenu = () => {
 const closeMobileNav = () => {
   state.width.value = window.innerWidth;
   if (state.width.value <= 1000) {
-    showMobileMenu.value = !showMobileMenu.value;
-    document.querySelector('.navbar').classList.toggle('visible');
+    if (showMobileMenu.value == true) {
+      showMobileMenu.value = false;
+      document.querySelector('.navbar').classList.toggle('visible');
+    }
   }
 }
 
@@ -104,7 +106,7 @@ onBeforeUnmount(() => {
 <template v-if="$width < 1135">
   <main class="landing-page">
     <header>
-      <RouterLink @click="scrollToTop();" :to="item.to" class="home-button-mobile"
+      <RouterLink @click="scrollToTop(); closeMobileNav();" :to="item.to" class="home-button-mobile"
         v-for="(item, index) in leftNavbarItems" :key="index" :style="{ 'animation-delay': `${index * 0.2}s` }">
         <span class="material-symbols-outlined" style="transform: scale(1.8);">
           home_app_logo
