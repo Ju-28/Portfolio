@@ -102,7 +102,6 @@ onBeforeUnmount(() => {
 </script>
 
 <template v-if="$width < 1000">
-  <!-- <CursorFollower /> -->
   <main class="landing-page">
     <header>
       <div class="burger-menu" @click="toggleMobileMenu" :class="{ 'open': showMobileMenu }">

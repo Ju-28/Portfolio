@@ -21,8 +21,11 @@ const unsetHovered = () => {
     <div class="experience-wrapper">
       <div v-motion-slide-left class="experience-left">
         <div class="experience-headline">
-          <h2><span class="material-symbols-sharp"> add
-            </span>Experience</h2>
+          <h2>
+            <span class="material-symbols-sharp"> add
+            </span>
+            Experience
+          </h2>
           <div class="about-me-h-line"></div>
         </div>
         <h2 class="experience-sub">Fullstack Engineer @42DIGITAL</h2>
@@ -85,7 +88,7 @@ const unsetHovered = () => {
                   </span></a></span>
               <p>Internship</p>
             </div>
-            <p class="experience-info">As part of my bachelor's degree program, I completed a 6-month internship.
+            <p class="experience-info">As part of my bachelor's degree, I completed a 6-month internship.
               During this time, my work within the scope of the 'Baseline-Generator'-Project was able to predict
               six-figure
               revenue amounts for the company and demonstrably improve the performance of the utilized forecasting model
