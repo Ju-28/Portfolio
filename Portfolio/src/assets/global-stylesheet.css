@@ -232,7 +232,7 @@ header {
 .landing-page {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  /* gap: 12rem; */
   overflow-x: hidden;
   /* align-items: center; */
 }
@@ -330,6 +330,10 @@ a {
   gap: 2.5rem;
 }
 
+.home-button-mobile {
+  display: none;
+}
+
 .left-navbar .navbar-item {
   padding: 1rem;
   color: #4bc2bc;
@@ -408,13 +412,36 @@ a {
   color: #010f23;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1135px) {
+  header {
+    height: 75px;
+    background-color: #010f23;
+    box-shadow: 0 5px 20px 0 black;
+    z-index: 999999;
+    position: fixed;
+  }
+
+  .left-navbar ul {
+    display: none;
+  }
+
+  .home-button-mobile {
+    z-index: 99999;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 30px;
+    left: 25px;
+    color: #4bc2bc;
+    transition: all 0.3s ease;
+  }
+
   .burger-menu {
     display: block;
     position: fixed;
     right: 0;
     background-color: transparent;
-    margin-top: 1rem;
     z-index: 9999;
   }
 

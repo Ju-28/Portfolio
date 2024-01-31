@@ -5,7 +5,7 @@
   align-items: center;
   max-width: 1400px;
   align-items: center;
-  /* margin-left: 10rem; */
+  margin-top: 7rem;
   position: relative;
 }
 
@@ -38,6 +38,7 @@
   gap: 1rem;
   font-size: x-large;
   min-width: 400px;
+  filter: drop-shadow(0 5px 5px #010f23);
 }
 
 .experience-headline span {
@@ -56,11 +57,13 @@
 .experience-sub {
   font-size: large;
   line-height: 1;
+  filter: drop-shadow(0 5px 5px #010f23);
 }
 
 .experience-intro {
   max-width: 400px;
   color: #8e92a0;
+  filter: drop-shadow(0 5px 5px #010f23);
 }
 
 .experience-right {
@@ -69,7 +72,7 @@
   flex-direction: column;
   gap: 3rem;
   max-width: 550px;
-  margin-left: 550px;
+  margin-left: 35rem;
   filter: drop-shadow(0 5px 5px #010f23);
 }
 
@@ -79,6 +82,7 @@
   padding: 1rem 1rem 1rem 1rem;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
+  filter: drop-shadow(0 5px 5px #010f23);
 }
 
 .experience:hover .experience-content span {
@@ -152,13 +156,23 @@
   padding-block: 0.25rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1135px) {
+  .experience-wrapper {
+    max-width: 1000px;
+    gap: 1.5rem;
+    margin-inline: 2rem;
+  }
+
+  .experience-right {
+    margin-left: 30rem;
+  }
+}
+
+@media screen and (max-width: 940px) {
   .experience-page {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin: 0;
-    max-width: 300px;
     align-self: center;
   }
 
@@ -166,8 +180,6 @@
     flex-direction: column;
     gap: 3rem;
     padding: 0;
-    width: fit-content;
-    max-width: inherit;
     height: fit-content;
     font-size: 1.4rem;
     align-items: center;
@@ -177,14 +189,73 @@
   }
 
   .experience-left {
+    position: relative;
+    min-width: 600px;
+  }
+
+  .experience-intro {
+    min-width: 550px;
+  }
+
+  .experience-right {
+    flex-direction: row;
+    overflow-y: scroll;
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  .experience-right::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    background: #4bc2bc;
+    border: 1px solid #4bc2bc;
+  }
+
+  .experience-right::-webkit-scrollbar {
+    height: 10px;
+    width: 100%;
+    padding-right: 3px;
+    display: block;
+  }
+
+  .experience-right::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  .experience {
+    min-width: 550px;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .experience-page {
+    max-width: 300px;
+    align-self: center;
+  }
+
+  .experience-wrapper {
+    gap: 3rem;
+    padding: 0;
+    width: fit-content;
+    max-width: inherit;
+    font-size: 1.4rem;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
+  .experience-left {
     margin: 0;
     font-size: smaller;
-    position: relative;
     text-align: left;
     top: 0;
+    min-width: 250px;
     max-width: inherit;
     font-size: small;
     min-height: fit-content;
+  }
+
+  .experience-intro {
+    min-width: 240px;
   }
 
   .experience-headline {
