@@ -7,8 +7,8 @@ const showForm = ref(true);
 const aboutMeContainerRef = ref(null);
 const contactWrapperRef = ref(null);
 
-const coloredImageSrc = '/images/julius_buller.png';
-const blackAndWhiteImageSrc = '/images/julius_buller_bw.png';
+const coloredImageSrc = '/images/pepe.png';
+const blackAndWhiteImageSrc = '/images/npc.png';
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   new TypeIt(".job", {
@@ -73,12 +73,12 @@ const showSocials = () => {
   <main class="home-page">
     <div class="personal-wrapper">
       <div class="introduction">Hey there! My name is</div>
-      <div class="name">Julius Buller.</div>
+      <div class="name">Name.</div>
       <div class="job type-effect">I bring visions into reality.</div>
       <div class="story">
         I am a fullstack software engineer spezialized in building and designing outstanding digital experiences.
         Currently,
-        I am working on my bachelor thesis at <span class="highlighted">42DIGITAL</span> while also creating a <span
+        I am working on my bachelor thesis at <span class="highlighted">Unternehmen</span> while also creating a <span
           class="highlighted">soon TBA
           SaaS</span>
         solution in the fields of networking, data and events.
@@ -126,7 +126,7 @@ const showSocials = () => {
           <img :src="coloredImageSrc" @click="showSocials" :class="{ 'img-shake': isAnimationActive }">
           <img :src="blackAndWhiteImageSrc" class="img-bw" @click="showSocials"
             :class="{ 'img-shake': isAnimationActive }">
-          <a href="https://www.instagram.com/julius_blr/" target="blank" class="social social-1"
+          <a href="https://www.instagram.com" target="blank" class="social social-1"
             :class="{ 'social-show-1': isAnimationActive, 'social-hide-1': !isAnimationActive }"><svg
               xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256">
               <defs>
@@ -171,7 +171,7 @@ const showSocials = () => {
                 </g>
               </g>
             </svg></a>
-          <a href="https://www.linkedin.com/in/julius-buller-7264b6226/" target="blank" class="social social-2"
+          <a href="https://www.linkedin.com/in" target="blank" class="social social-2"
             :class="{ 'social-show-2': isAnimationActive, 'social-hide-2': !isAnimationActive }"><svg
               xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256">
               <g transform="">
@@ -196,7 +196,7 @@ const showSocials = () => {
                 </g>
               </g>
             </svg></a>
-          <a href="https://github.com/Ju-28" target="blank" class="social social-3"
+          <a href="https://github.com" target="blank" class="social social-3"
             :class="{ 'social-show-3': isAnimationActive, 'social-hide-3': !isAnimationActive }">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="42" height="42" viewBox="0,0,256,256">
               <g fill-opacity="0" fill="#cdd7f7" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"

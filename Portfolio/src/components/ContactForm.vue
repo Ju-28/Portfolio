@@ -78,7 +78,7 @@ const handleForm = () => {
                 </div>
             </div>
             <div class="form-submit">
-                <input class="submit" type="submit" name="send" value="Send" @click="handleForm" />
+                <input class="submit" type="submit" name="send" value="Send" />
             </div>
         </form>
     </div>

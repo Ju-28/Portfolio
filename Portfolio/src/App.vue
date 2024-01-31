@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
                 @click="scrollToTop(); closeMobileNav();">{{
                   item.label
                 }}</router-link>
-              <a class="pdf-button" :href="pdfPath" download="Julius_Buller_CV.pdf"
+              <a class="pdf-button" :href="pdfPath"
                 :style="{ 'animation-delay': `${(leftNavbarItems.length + rightNavbarItems.length) * 0.2}s` }">Resume<span
                   class="material-symbols-outlined">
                   download

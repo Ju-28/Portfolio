@@ -28,7 +28,7 @@ const unsetHovered = () => {
           </h2>
           <div class="about-me-h-line"></div>
         </div>
-        <h2 class="experience-sub">Fullstack Engineer @42DIGITAL</h2>
+        <h2 class="experience-sub">Fullstack Engineer @Unternehmen</h2>
         <div class="experience-intro">
           Since starting my bachelor's degree, I've been able to work in various positions, allowing me to gain a wide
           variety of
@@ -45,17 +45,11 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Fullstack Engineer · 42DIGITAL
-                <!-- <a class="pdf-reference"
-                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
-                <span class="material-symbols-rounded">
-                  article_shortcut
-                </span>
-                 </a> -->
+              <span class="experience-position">Fullstack Engineer · Unternehmen
               </span>
               <p>Bachelor Thesis</p>
             </div>
-            <p class="experience-info">During my bachelor thesis at 42DIGITAL, I was in charge of creating a customer
+            <p class="experience-info">During my bachelor thesis at Unternehmen, I was in charge of creating a customer
               center from scratch, which
               would help to manage clients, generate new revenue streams and lay the foundation of a new product line.
               Some of the key features are 24/7 personal dashboard access, an alert manager for custom metrics and
@@ -82,14 +76,14 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Data Science & Strategy · GreenPocket<a class="pdf-reference"
+              <span class="experience-position">Data Science & Strategy · Unternehmen<a class="pdf-reference"
                   :href="pdfPath_GreenPocket" download="Reference_GreenPocket.pdf"><span class="material-symbols-rounded">
                     article_shortcut
                   </span></a></span>
               <p>Internship</p>
             </div>
             <p class="experience-info">As part of my bachelor's degree, I completed a 6-month internship.
-              During this time, my work within the scope of the 'Baseline-Generator'-Project was able to predict
+              During this time, my work within the scope of the 'Pojektname'-Project was able to predict
               six-figure
               saving amounts for the company's clients and demonstrably improve the performance of the utilized
               forecasting model
@@ -111,17 +105,11 @@ const unsetHovered = () => {
           </div>
           <div class="experience-content">
             <div>
-              <span class="experience-position">Data Engineer · 42DIGITAL
-                <!-- <a class="pdf-reference"
-                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
-                <span class="material-symbols-rounded">
-                  article_shortcut
-                </span>
-                 </a> -->
+              <span class="experience-position">Data Engineer · Unternehmen
               </span>
               <p>Working Student</p>
             </div>
-            <p class="experience-info">At my first job in the IT industry, I began as a working student at 42DIGITAL,
+            <p class="experience-info">At my first job in the IT industry, I began as a working student at Unternehmen,
               where I supported the daily work of the Data & AI team. I was responsible for numerous ETL processes, cloud
               functions and integrations, as well as data visualization for B2B clients to help them understand their
               metrics. Here, I gained initial experience
