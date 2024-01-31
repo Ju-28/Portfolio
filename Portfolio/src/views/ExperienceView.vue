@@ -91,7 +91,8 @@ const unsetHovered = () => {
             <p class="experience-info">As part of my bachelor's degree, I completed a 6-month internship.
               During this time, my work within the scope of the 'Baseline-Generator'-Project was able to predict
               six-figure
-              revenue amounts for the company and demonstrably improve the performance of the utilized forecasting model
+              saving amounts for the company's clients and demonstrably improve the performance of the utilized
+              forecasting model
               through parameter tuning. This experience, coupled with some of the courses I attended, gave me the
               opportunity
               to deepen my knowledge in the areas of ETL, Data Science, and Strategy. </p>
@@ -122,7 +123,8 @@ const unsetHovered = () => {
             </div>
             <p class="experience-info">At my first job in the IT industry, I began as a working student at 42DIGITAL,
               where I supported the daily work of the Data & AI team. I was responsible for numerous ETL processes, cloud
-              functions and integrations, as well as data visualization for B2B clients. Here, I gained initial experience
+              functions and integrations, as well as data visualization for B2B clients to help them understand their
+              metrics. Here, I gained initial experience
               with Google Cloud and its functions, while also learning to create efficient SQL queries and data pipelines.
             </p>
             <div class="technologies">

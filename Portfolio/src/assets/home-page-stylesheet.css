@@ -175,6 +175,7 @@
 .about-me-left-inner {
   margin-block: 0.5rem;
   gap: 1rem;
+  filter: drop-shadow(0 5px 5px #010f23);
 }
 
 .about-me-left h2 {
