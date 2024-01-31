@@ -268,7 +268,7 @@
   }
 
   .experience-right {
-    justify-content: center;
+    /* justify-content: flex-start; */
     flex-direction: row;
     max-width: 350px;
     overflow-y: scroll;
