@@ -252,6 +252,13 @@ a {
   word-spacing: -0.3rem;
 }
 
+.construction-gif {
+  margin-top: 4rem;
+  height: 200px;
+  width: 200px;
+  align-self: center;
+}
+
 .bar {
   height: 0.2rem;
   margin: 1rem;
