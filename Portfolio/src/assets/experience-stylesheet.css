@@ -74,8 +74,8 @@
   max-width: 550px;
   margin-left: 35rem;
   filter: drop-shadow(0 5px 5px #010f23);
-  /* scroll-snap-type: x mandatory;
-  overscroll-behavior: contain; */
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
 }
 
 .experience {
@@ -85,7 +85,7 @@
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
   filter: drop-shadow(0 5px 5px #010f23);
-  /* scroll-snap-align: start; */
+  scroll-snap-align: start;
 }
 
 .experience:hover .experience-content span {
