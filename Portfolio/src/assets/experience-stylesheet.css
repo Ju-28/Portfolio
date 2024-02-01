@@ -74,8 +74,8 @@
   max-width: 550px;
   margin-left: 35rem;
   filter: drop-shadow(0 5px 5px #010f23);
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
+  /* scroll-snap-type: x mandatory;
+  overscroll-behavior: contain; */
 }
 
 .experience {
@@ -85,7 +85,7 @@
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
   filter: drop-shadow(0 5px 5px #010f23);
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .experience:hover .experience-content span {
@@ -202,6 +202,7 @@
 
   .experience-right {
     /* box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4); */
+    min-width: 600px;
     flex-direction: row;
     overflow-y: scroll;
     margin: 0;
@@ -226,8 +227,11 @@
   }
 
   .experience {
-    min-width: 550px;
+    min-width: 500px;
     overflow: scroll;
+    opacity: 1 !important;
+    backdrop-filter: blur(0.5rem) !important;
+    background-color: rgba(255, 255, 255, 0.048) !important;
   }
 }
 
@@ -270,14 +274,16 @@
 
   .experience-right {
     flex-direction: row;
+    min-width: 300px;
     max-width: 350px;
     overflow-y: scroll;
     margin: 0;
     border-radius: 5px;
+    gap: 1rem;
   }
 
   .experience {
-    min-width: 340px;
+    min-width: 300px;
     overflow: scroll;
   }
 
