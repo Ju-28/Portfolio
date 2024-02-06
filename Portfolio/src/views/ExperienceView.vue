@@ -19,7 +19,7 @@ const unsetHovered = () => {
 <template>
   <main class="experience-page">
     <div class="experience-wrapper">
-      <div v-motion-slide-left class="experience-left">
+      <div class="experience-left">
         <div class="experience-headline">
           <h2>
             <span class="material-symbols-sharp"> add
@@ -37,7 +37,7 @@ const unsetHovered = () => {
           my skillset and deepen my understanding for digital solutions.
         </div>
       </div>
-      <div v-motion-fade class="experience-right">
+      <div class="experience-right">
         <div class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()"
           :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">

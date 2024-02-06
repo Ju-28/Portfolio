@@ -7,8 +7,8 @@ const showForm = ref(true);
 const aboutMeContainerRef = ref(null);
 const contactWrapperRef = ref(null);
 
-const coloredImageSrc = '/images/julius_buller.png';
-const blackAndWhiteImageSrc = '/images/julius_buller_bw.png';
+const coloredImageSrc = '/images/julius_buller.jpg';
+const blackAndWhiteImageSrc = '/images/julius_buller_bw.jpg';
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   new TypeIt(".job", {
@@ -93,7 +93,7 @@ const showSocials = () => {
 
     <div class="about-me-container" ref="aboutMeContainerRef">
       <div class="about-me-content">
-        <div v-motion-pop-visible class="about-me-left">
+        <div class="about-me-left">
           <div class="about-me-headline">
             <h2><span class="material-symbols-sharp"> add
               </span>About me</h2>
@@ -118,7 +118,7 @@ const showSocials = () => {
                 SaaS</span>.</p>
           </div>
         </div>
-        <div v-motion-pop-visible class="about-me-right">
+        <div class="about-me-right">
           <div class="img-box"></div>
           <span class="click-me" @click="showSocials">
             Click me!
@@ -219,7 +219,7 @@ const showSocials = () => {
       </div>
       <div class="scroll-to-contact" @click="formScroll">Contact me!</div>
     </div>
-    <div v-motion-pop-visible class="contact-wrapper" ref="contactWrapperRef">
+    <div class="contact-wrapper" ref="contactWrapperRef">
       <ContactForm :class="{ 'formFadeIn': !showForm, 'formFadeOut': showForm }" class="contactForm" ref="contactForm" />
     </div>
   </main>
