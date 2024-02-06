@@ -10,4 +10,4 @@ const constructionGif = '/images/construction.gif';
             <img class="construction-gif" :src="constructionGif">
         </div>
     </main>
-</template>
+</template> 

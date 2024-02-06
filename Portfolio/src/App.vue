@@ -150,8 +150,8 @@ onBeforeUnmount(() => {
     <div v-if="scrollPosition >= 500" class="scroll-to-top" @click="scrollToTop"><span class="material-symbols-sharp">
         arrow_upward
       </span></div>
-    <div class="bubble-purple"></div>
+    <!-- <div class="bubble-purple"></div>
     <div class="bubble-peach"></div>
-    <div class="bubble-yellow"></div>
+    <div class="bubble-yellow"></div> -->
   </main>
 </template>
