@@ -229,9 +229,9 @@
   .experience {
     min-width: 500px;
     overflow: scroll;
-    opacity: 1 !important;
-    backdrop-filter: blur(0.5rem) !important;
-    background-color: rgba(255, 255, 255, 0.048) !important;
+    /* opacity: 1 !important; */
+    /* backdrop-filter: blur(0.5rem) !important;
+    background-color: rgba(255, 255, 255, 0.048) !important; */
   }
 }
 
