@@ -62,7 +62,7 @@
 
 .experience-intro {
   max-width: 400px;
-  color: #8e92a0;
+  color: #9699a7;
   filter: drop-shadow(0 5px 5px #010f23);
 }
 
@@ -89,7 +89,7 @@
 }
 
 .experience:hover .experience-content span {
-  color: #4bc2bc;
+  color: #63fff7;
 }
 
 .experience:hover .pdf-reference {
@@ -109,7 +109,7 @@
 .experience-time {
   font-size: 11px;
   min-width: 120px;
-  color: #8e92a0;
+  color: #9699a7;
 }
 
 .experience-content {
@@ -120,7 +120,7 @@
 
 .pdf-reference span {
   font-size: large;
-  color: #4bc2bc;
+  color: #63fff7;
   transition: all 0.2s ease-in-out;
 }
 
@@ -135,11 +135,11 @@
 
 .experience-content div p {
   font-size: large;
-  color: #8e92a0;
+  color: #9699a7;
 }
 
 .experience-info {
-  color: #8e92a0;
+  color: #9699a7;
 }
 
 .technologies {
@@ -150,9 +150,9 @@
 
 .technology {
   border-radius: 999px;
-  background-color: #4bc2bc74;
+  background-color: #63fff774;
   background-color: rgba(45, 212, 190, 0.148);
-  color: #4bc2bc;
+  color: #63fff7;
   font-weight: 600;
   font-size: 0.75rem;
   padding-inline: 0.75rem;
@@ -211,8 +211,8 @@
 
   .experience-right::-webkit-scrollbar-thumb {
     border-radius: 100vw;
-    background: #4bc2bc;
-    border: 1px solid #4bc2bc;
+    background: #63fff7;
+    border: 1px solid #63fff7;
   }
 
   .experience-right::-webkit-scrollbar {

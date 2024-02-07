@@ -43,9 +43,9 @@
 }
 
 .introduction {
-  color: #4bc2bc;
+  color: #63fff7;
   font-family: 'Sometype Mono', monospace;
-  filter: drop-shadow(0 2px 5px #010f23);
+  filter: drop-shadow(0 2px 5px #00001a);
 }
 
 .name {
@@ -53,17 +53,17 @@
   font-size: 5rem;
   font-weight: bolder;
   line-height: 1;
-  filter: drop-shadow(0 10px 5px #010f23);
+  filter: drop-shadow(0 10px 5px #00001a);
 }
 
 .job {
   font-size: 5rem;
   font-weight: bolder;
-  color: #8e92a0;
+  color: #9699a7;
   padding-bottom: 1.8rem;
   line-height: 1;
   animation: flare 0.6s 1.4s ease-in forwards;
-  filter: drop-shadow(0 10px 5px #010f23);
+  filter: drop-shadow(0 10px 5px #00001a);
 }
 
 @keyframes flare {
@@ -72,7 +72,7 @@
   }
   50% {
     color: #bdfffc;
-    text-shadow: 0 0 30px #4bc2bc;
+    text-shadow: 0 0 30px #63fff7;
   }
   100% {
     color: #c5c9d8;
@@ -84,8 +84,8 @@
   font-family: 'Nunito Sans', sans-serif;
   text-align: left;
   max-width: 600px;
-  color: #8e92a0;
-  filter: drop-shadow(0 5px 5px #010f23);
+  color: #9699a7;
+  filter: drop-shadow(0 5px 5px #00001a);
 }
 
 .more-buttons {
@@ -93,17 +93,17 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  filter: drop-shadow(0 2px 5px #010f23);
+  filter: drop-shadow(0 2px 5px #00001a);
 }
 
 .scroll-to-about-me {
   position: relative;
   background-color: transparent;
-  color: #4bc2bc;
-  border: 2px solid #4bc2bc;
+  color: #63fff7;
+  border: 2px solid #63fff7;
   border-radius: 8px;
   padding: 1rem;
-  filter: drop-shadow(0 3px 3px #010f23);
+  filter: drop-shadow(0 3px 3px #00001a);
   transition: all 0.3s ease;
   cursor: pointer;
   align-self: center;
@@ -113,9 +113,9 @@
 }
 
 .scroll-to-about-me:hover {
-  box-shadow: 0 0 10px 0 #4bc2bc;
-  background-color: #4bc2bc;
-  color: #010f23;
+  box-shadow: 0 0 10px 0 #63fff7;
+  background-color: #63fff7;
+  color: #00001a;
   transform: scale(0.95);
 }
 
@@ -134,7 +134,7 @@
   display: flex;
   flex-direction: row;
   font-family: 'Nunito Sans', sans-serif;
-  filter: drop-shadow(0 5px 5px #010f23);
+  filter: drop-shadow(0 5px 5px #00001a);
   gap: 6rem;
 }
 
@@ -144,7 +144,7 @@
 }
 
 .material-symbols-sharp {
-  color: #4bc2bc;
+  color: #63fff7;
   position: relative;
   top: 5px;
   right: 5px;
@@ -158,15 +158,15 @@
 }
 
 .about-me-left {
-  color: #8e92a0;
+  color: #9699a7;
   display: flex;
   flex-direction: column;
   max-width: 350px;
   max-height: 600px;
   gap: 1rem;
   padding: 1rem;
-  filter: drop-shadow(0 5px 5px #010f23);
-  box-shadow: 0 0 20px 0 #010f2315;
+  filter: drop-shadow(0 5px 5px #00001a);
+  box-shadow: 0 0 20px 0 #00001a15;
   border-radius: 10px;
   backdrop-filter: blur(5rem);
   background-color: rgba(255, 255, 255, 0.075);
@@ -175,7 +175,7 @@
 .about-me-left-inner {
   margin-block: 0.5rem;
   gap: 1rem;
-  filter: drop-shadow(0 5px 5px #010f23);
+  filter: drop-shadow(0 5px 5px #00001a);
 }
 
 .about-me-left h2 {
@@ -188,7 +188,7 @@
 }
 
 .img-box {
-  border: 3px solid #4bc2bc;
+  border: 3px solid #63fff7;
   border-radius: 15px;
   position: relative;
   width: 350px;
@@ -378,11 +378,11 @@
 .scroll-to-contact {
   position: relative;
   background-color: transparent;
-  color: #4bc2bc;
-  border: 2px solid #4bc2bc;
+  color: #63fff7;
+  border: 2px solid #63fff7;
   border-radius: 8px;
   padding: 1rem;
-  filter: drop-shadow(0 3px 3px #010f23);
+  filter: drop-shadow(0 3px 3px #00001a);
   transition: all 0.3s ease;
   cursor: pointer;
   width: fit-content;
@@ -391,9 +391,9 @@
 }
 
 .scroll-to-contact:hover {
-  box-shadow: 0 0 10px 0 #4bc2bc;
-  background-color: #4bc2bc;
-  color: #010f23;
+  box-shadow: 0 0 10px 0 #63fff7;
+  background-color: #63fff7;
+  color: #00001a;
   transform: scale(0.95);
 }
 
@@ -413,22 +413,22 @@
 .contact-header {
   position: relative;
   padding: 1rem;
-  border: solid 2px #4bc2bc;
+  border: solid 2px #63fff7;
   border-radius: 8px;
-  color: #4bc2bc;
+  color: #63fff7;
   transition: all 0.3s ease;
   cursor: pointer;
   font-family: 'Sometype Mono', monospace;
   align-self: flex-start;
   background-color: transparent;
   z-index: 1;
-  filter: drop-shadow(0 5px 5px #010f23);
+  filter: drop-shadow(0 5px 5px #00001a);
 }
 
 .contact-header:hover {
-  box-shadow: 0 0 10px 0 #4bc2bc;
-  background-color: #4bc2bc;
-  color: #010f23;
+  box-shadow: 0 0 10px 0 #63fff7;
+  background-color: #63fff7;
+  color: #00001a;
   transform: scale(0.95);
 }
 
@@ -450,7 +450,7 @@
   }
 
   .about-me-left-inner {
-    overflow: scroll;
+    overflow: visible;
   }
 
   .click-me {
@@ -789,7 +789,7 @@
   }
 
   .about-me-left {
-    max-height: 320px;
+    max-height: fit-content;
     font-size: medium;
   }
 
