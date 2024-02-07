@@ -5,28 +5,28 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #010f23;
+  background: #00001a;
   margin-block: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 100vw;
-  background: #4bc2bc;
-  border: 10px solid #010f23;
+  background: #63fff7;
+  border: 10px solid #00001a;
 }
 
 .bubble-purple {
-  height: 500px;
-  width: 800px;
+  height: 250px;
+  width: 400px;
   background-color: rgba(116, 0, 217, 0.4592);
   border: 0;
   border-radius: 50%;
   box-shadow: 0 0 100px rgba(116, 0, 217, 0.4592);
   position: fixed;
-  filter: blur(7rem);
-  animation: movePurpleBubble 40s 1.5s ease-in-out infinite;
+  filter: blur(3.5rem);
+  /* animation: movePurpleBubble 40s 1.5s ease-in-out infinite; */
   z-index: -1;
-  transform: translate(200px, 100px) scale(1);
+  transform: translate(600px, 100px) scale(1);
 }
 
 .bubble-yellow {
@@ -35,11 +35,11 @@
   border-radius: 50%;
   box-shadow: 0 0 100px rgba(193, 143, 4, 0.4592);
   position: fixed;
-  filter: blur(9rem);
-  height: 800px;
-  width: 500px;
-  animation: moveYellowBubble 55s 1.5s ease-in-out infinite;
-  transform: translate(200px, 100px) scale(1);
+  filter: blur(4rem);
+  height: 400px;
+  width: 250px;
+  /* animation: moveYellowBubble 55s 1.5s ease-in-out infinite; */
+  transform: translate(250px, 150px) scale(1);
   z-index: -1;
 }
 
@@ -49,12 +49,12 @@
   border-radius: 50%;
   box-shadow: 0 0 100px #d7461a;
   position: fixed;
-  filter: blur(9rem);
-  height: 700px;
-  width: 200px;
-  animation: movePeachBubble 30s 1.5s ease-in-out infinite;
+  filter: blur(5rem);
+  height: 400px;
+  width: 70px;
+  /* animation: movePeachBubble 30s 1.5s ease-in-out infinite; */
   z-index: -1;
-  transform: translate(600px, -150px) scale(1.2);
+  transform: translate(600px, 200px) scale(1.2);
 }
 
 @keyframes movePeachBubble {
@@ -178,11 +178,11 @@
   bottom: 80px; /* Adjust the distance from the bottom as needed */
   right: 5%; /* Adjust the distance from the right as needed */
   background-color: transparent;
-  color: #4bc2bc;
-  border: 2px solid #4bc2bc;
+  color: #63fff7;
+  border: 2px solid #63fff7;
   border-radius: 8px;
   padding: 0.75rem;
-  filter: drop-shadow(0 5px 5px #010f23);
+  filter: drop-shadow(0 5px 5px #00001a);
   transition: all 0.3s ease;
   cursor: pointer;
   font-family: 'Sometype Mono', monospace;
@@ -198,14 +198,14 @@
 }
 
 .scroll-to-top:hover {
-  box-shadow: 0 0 10px 0 #4bc2bc;
-  background-color: #4bc2bc;
+  box-shadow: 0 0 10px 0 #63fff7;
+  background-color: #63fff7;
   transform: scale(0.95);
-  color: #010f23;
+  color: #00001a;
 }
 
 .scroll-to-top:hover span {
-  color: #010f23;
+  color: #00001a;
 }
 
 * {
@@ -217,7 +217,7 @@
 
 body {
   height: 100svh;
-  background-color: #010f23;
+  background-color: #00001a;
   max-width: 1400px;
   margin-inline: auto;
 }
@@ -238,7 +238,7 @@ header {
 }
 
 ::selection {
-  background: #4bc2bc;
+  background: #63fff7;
 }
 
 a {
@@ -246,8 +246,8 @@ a {
 }
 
 .highlighted {
-  color: #4bc2bc;
-  text-shadow: 0 0 2px #4bc2bc;
+  color: #63fff7;
+  text-shadow: 0 0 2px #63fff7;
   font-family: 'Sometype Mono', monospace;
   word-spacing: -0.3rem;
 }
@@ -263,7 +263,7 @@ a {
   height: 0.2rem;
   margin: 1rem;
   color: black;
-  background-color: #4bc2bc;
+  background-color: #63fff7;
   transition: 0.4s;
   width: 3rem;
   backdrop-filter: blur(0.1rem);
@@ -297,9 +297,9 @@ a {
 }
 
 .navbar {
-  background: linear-gradient(to bottom, #010f23, transparent);
+  background: linear-gradient(to bottom, #00001a, transparent);
   margin-bottom: 5rem;
-  color: #4bc2bc;
+  color: #63fff7;
   font-family: 'Sometype Mono', monospace;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -343,13 +343,13 @@ a {
 
 .left-navbar .navbar-item {
   padding: 1rem;
-  color: #4bc2bc;
+  color: #63fff7;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .left-navbar .navbar-item:hover {
-  text-shadow: 0 0 10px #4bc2bc;
+  text-shadow: 0 0 10px #63fff7;
 }
 
 .right-navbar ul {
@@ -372,8 +372,8 @@ a {
 }
 
 .navbar-item:hover {
-  color: #4bc2bc;
-  text-shadow: 0 0 10px #4bc2bc;
+  color: #63fff7;
+  text-shadow: 0 0 10px #63fff7;
 }
 
 @keyframes SlideIn {
@@ -405,29 +405,29 @@ a {
 .pdf-button {
   opacity: 0;
   padding: 1rem;
-  border: solid 2px #4bc2bc;
+  border: solid 2px #63fff7;
   border-radius: 8px;
-  color: #4bc2bc;
+  color: #63fff7;
   transition: all 0.3s ease;
   animation: SlideIn 1.2s cubic-bezier(0.453, 0.74, 0.657, 0.99) forwards;
   pointer-events: all;
 }
 
 .pdf-button:hover {
-  box-shadow: 0 0 10px 0 #4bc2bc;
-  background-color: #4bc2bc;
-  color: #010f23;
+  box-shadow: 0 0 10px 0 #63fff7;
+  background-color: #63fff7;
+  color: #00001a;
 }
 
 .router-link-active {
-  color: #4bc2bc;
-  text-shadow: 0 0 10px #4bc2bc;
+  color: #63fff7;
+  text-shadow: 0 0 10px #63fff7;
 }
 
 @media screen and (max-width: 1135px) {
   header {
     height: 75px;
-    background-color: #010f23;
+    background-color: #00001a;
     box-shadow: 0 5px 20px 0 black;
     z-index: 999999;
     position: fixed;
@@ -445,7 +445,7 @@ a {
     position: fixed;
     top: 30px;
     left: 25px;
-    color: #4bc2bc;
+    color: #63fff7;
     transition: all 0.3s ease;
   }
 
@@ -466,7 +466,7 @@ a {
 
   .navbar.visible {
     display: flex;
-    background-color: #010f23;
+    background-color: #00001a;
     justify-content: center;
     position: fixed;
     height: 100vh;

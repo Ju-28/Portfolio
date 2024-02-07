@@ -3,7 +3,7 @@
   padding-bottom: 5rem;
   display: flex;
   align-items: flex-start;
-  filter: drop-shadow(0 -2px 3px #010f23);
+  filter: drop-shadow(0 -2px 3px #00001a);
   align-self: center;
 }
 
@@ -154,20 +154,20 @@
 }
 
 .input:focus {
-  border-bottom: solid 2px #4bc2bc;
+  border-bottom: solid 2px #63fff7;
 }
 
 #message:focus {
-  border-bottom: solid 2px #4bc2bc;
+  border-bottom: solid 2px #63fff7;
 }
 
 .submit {
   margin-top: 2.5rem;
   padding-block: 1rem;
   padding-inline: 3rem;
-  border: solid 2px #4bc2bc;
+  border: solid 2px #63fff7;
   border-radius: 8px;
-  color: #4bc2bc;
+  color: #63fff7;
   transition: all 0.3s ease;
   cursor: pointer;
   font-family: 'Sometype Mono', monospace;
@@ -176,9 +176,9 @@
 }
 
 .submit:hover {
-  box-shadow: 0 0 10px 0 #4bc2bc;
-  background-color: #4bc2bc;
-  color: #010f23;
+  box-shadow: 0 0 10px 0 #63fff7;
+  background-color: #63fff7;
+  color: #00001a;
 }
 
 .submit:active {
