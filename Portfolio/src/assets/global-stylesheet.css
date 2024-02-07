@@ -37,9 +37,9 @@
   position: fixed;
   filter: blur(4rem);
   height: 400px;
-  width: 250px;
+  width: 550px;
   /* animation: moveYellowBubble 55s 1.5s ease-in-out infinite; */
-  transform: translate(250px, 150px) scale(1);
+  transform: translate(50px, 150px) scale(1);
   z-index: -1;
 }
 
@@ -55,6 +55,15 @@
   /* animation: movePeachBubble 30s 1.5s ease-in-out infinite; */
   z-index: -1;
   transform: translate(600px, 200px) scale(1.2);
+}
+
+.orange-background {
+  height: 350px;
+  width: 3000px;
+  position: absolute;
+  transform: rotate(-13deg) translateX(-400px);
+  background-color: #d78f1aa1;
+  z-index: -5;
 }
 
 @keyframes movePeachBubble {
@@ -246,8 +255,8 @@ a {
 }
 
 .highlighted {
-  color: #63fff7;
-  text-shadow: 0 0 2px #63fff7;
+  color: #ef63ff;
+  text-shadow: 0 0 2px #ef63ff;
   font-family: 'Sometype Mono', monospace;
   word-spacing: -0.3rem;
 }
@@ -371,9 +380,9 @@ a {
   pointer-events: all;
 }
 
-.navbar-item:hover {
-  color: #63fff7;
-  text-shadow: 0 0 10px #63fff7;
+.right-navbar .navbar-item:hover {
+  color: #ef63ff;
+  text-shadow: 0 0 10px #ef63ff;
 }
 
 @keyframes SlideIn {
@@ -419,9 +428,14 @@ a {
   color: #00001a;
 }
 
-.router-link-active {
+.left-navbar .router-link-active {
   color: #63fff7;
   text-shadow: 0 0 10px #63fff7;
+}
+
+.right-navbar .router-link-active {
+  color: #ef63ff;
+  text-shadow: 0 0 10px #ef63ff;
 }
 
 @media screen and (max-width: 1135px) {
@@ -516,6 +530,18 @@ a {
 }
 
 @media screen and (max-width: 650px) {
+  .bubble-peach {
+    transform: translate(70px, 200px) scale(0.65);
+  }
+
+  .bubble-purple {
+    transform: translate(20px, 150px) scale(0.45);
+  }
+
+  .bubble-yellow {
+    transform: translate(-30px, 160px) scale(0.35);
+  }
+
   @keyframes movePeachBubble {
     0%,
     100% {

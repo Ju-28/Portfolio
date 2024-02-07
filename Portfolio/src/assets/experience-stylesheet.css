@@ -88,8 +88,8 @@
   scroll-snap-align: start;
 }
 
-.experience:hover .experience-content span {
-  color: #63fff7;
+.experience:hover .experience-header {
+  color: #ef63ff;
 }
 
 .experience:hover .pdf-reference {
