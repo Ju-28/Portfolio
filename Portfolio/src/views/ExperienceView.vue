@@ -38,8 +38,8 @@ const unsetHovered = () => {
         </div>
       </div>
       <div class="experience-right">
-        <div class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()"
-          :class="{ 'low-opacity': hoveredElement }">
+        <div class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()" @touchstart="setHovered()"
+          @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             OCT 2023 - PRESENT
           </div>
@@ -76,7 +76,7 @@ const unsetHovered = () => {
           </div>
         </div>
         <div class="experience green-pocket" @mouseover="setHovered()" @mouseleave="unsetHovered()"
-          :class="{ 'low-opacity': hoveredElement }">
+          @touchstart="setHovered()" @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             MAR 2023 - SEP 2023
           </div>
@@ -105,7 +105,7 @@ const unsetHovered = () => {
           </div>
         </div>
         <div class="experience working-student" @mouseover="setHovered()" @mouseleave="unsetHovered()"
-          :class="{ 'low-opacity': hoveredElement }">
+          @touchstart="setHovered()" @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             JUN 2022 - FEB 2023
           </div>
