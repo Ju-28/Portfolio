@@ -150,7 +150,7 @@
 }
 
 .input:focus ~ .placeholder {
-  color: #dc2f55;
+  color: #ef63ff;
 }
 
 .input:focus {

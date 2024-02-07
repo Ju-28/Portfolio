@@ -43,7 +43,7 @@
 }
 
 .introduction {
-  color: #63fff7;
+  color: #ef63ff;
   font-family: 'Sometype Mono', monospace;
   filter: drop-shadow(0 2px 5px #00001a);
 }
@@ -188,7 +188,7 @@
 }
 
 .img-box {
-  border: 3px solid #63fff7;
+  border: 3px solid #ef63ff;
   border-radius: 15px;
   position: relative;
   width: 350px;

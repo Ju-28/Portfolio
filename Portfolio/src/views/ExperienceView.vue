@@ -3,7 +3,21 @@ import { ref } from 'vue';
 // const pdfPath_42DIGITAL = import.meta.env.BASE_URL + 'public/downloads/Julius_Buller_Reference_42DIGITAL.pdf';
 const pdfPath_GreenPocket = import.meta.env.BASE_URL + './downloads/Julius_Buller_Reference_GreenPocket.pdf';
 
+const bachelorRef = ref(null)
+const greenPocketRef = ref(null)
+const workingStudentRef = ref(null)
 
+function workingStudentScroll() {
+  if (workingStudentRef.value) {
+    const targetScrollPosition = workingStudentRef.value
+
+    window.scrollTo({
+      left: targetScrollPosition,
+      behavior: 'smooth'
+    });
+  }
+
+}
 
 const hoveredElement = ref(false);
 
@@ -38,13 +52,13 @@ const unsetHovered = () => {
         </div>
       </div>
       <div class="experience-right">
-        <div class="experience bachelor" @mouseover="setHovered()" @mouseleave="unsetHovered()" @touchstart="setHovered()"
-          @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
+        <div class="experience bachelor" ref="bachelorRef" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+          @touchstart="setHovered()" @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             OCT 2023 - PRESENT
           </div>
           <div class="experience-content">
-            <div>
+            <div class="experience-header">
               <span class="experience-position">Fullstack Engineer · 42DIGITAL
                 <!-- <a class="pdf-reference"
                   :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
@@ -75,13 +89,13 @@ const unsetHovered = () => {
             </div>
           </div>
         </div>
-        <div class="experience green-pocket" @mouseover="setHovered()" @mouseleave="unsetHovered()"
+        <div class="experience green-pocket" ref="greenPocketRef" @mouseover="setHovered()" @mouseleave="unsetHovered()"
           @touchstart="setHovered()" @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             MAR 2023 - SEP 2023
           </div>
           <div class="experience-content">
-            <div>
+            <div class="experience-header">
               <span class="experience-position">Data Science & Strategy · GreenPocket<a class="pdf-reference"
                   :href="pdfPath_GreenPocket" download="Reference_GreenPocket.pdf"><span class="material-symbols-rounded">
                     article_shortcut
@@ -104,13 +118,14 @@ const unsetHovered = () => {
             </div>
           </div>
         </div>
-        <div class="experience working-student" @mouseover="setHovered()" @mouseleave="unsetHovered()"
-          @touchstart="setHovered()" @touchend="unsetHovered()" :class="{ 'low-opacity': hoveredElement }">
+        <div class="experience working-student" ref="workingStudentRef" @click="workingStudentScroll"
+          @mouseover="setHovered()" @mouseleave="unsetHovered()" @touchstart="setHovered()" @touchend="unsetHovered()"
+          :class="{ 'low-opacity': hoveredElement }">
           <div class="experience-time">
             JUN 2022 - FEB 2023
           </div>
           <div class="experience-content">
-            <div>
+            <div class="experience-header">
               <span class="experience-position">Data Engineer · 42DIGITAL
                 <!-- <a class="pdf-reference"
                   :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
