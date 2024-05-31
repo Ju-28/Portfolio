@@ -57,15 +57,6 @@
   transform: translate(600px, 200px) scale(1.2);
 }
 
-.orange-background {
-  height: 350px;
-  width: 3000px;
-  position: absolute;
-  transform: rotate(-13deg) translateX(-400px);
-  background-color: #d78f1aa1;
-  z-index: -5;
-}
-
 @keyframes movePeachBubble {
   0%,
   100% {

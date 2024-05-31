@@ -201,9 +201,7 @@
   }
 
   .experience-right {
-    /* box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4); */
     min-width: 600px;
-    flex-direction: row;
     overflow-y: scroll;
     margin: 0;
     border-radius: 5px;
@@ -273,7 +271,6 @@
   }
 
   .experience-right {
-    flex-direction: row;
     min-width: 300px;
     max-width: 350px;
     overflow-y: scroll;
