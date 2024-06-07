@@ -1,6 +1,10 @@
 <script setup>
+import { onMounted } from 'vue';
 const constructionGif = '/images/construction.gif';
 
+onMounted(() => {
+    document.title = 'Julius Buller | Services'
+})
 </script>
 
 <template>
@@ -10,4 +14,4 @@ const constructionGif = '/images/construction.gif';
             <img class="construction-gif" :src="constructionGif">
         </div>
     </main>
-</template> 
+</template>

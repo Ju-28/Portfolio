@@ -179,6 +179,7 @@
   box-shadow: 0 0 10px 0 #63fff7;
   background-color: #63fff7;
   color: #00001a;
+  transform: scale(0.95);
 }
 
 .submit:active {

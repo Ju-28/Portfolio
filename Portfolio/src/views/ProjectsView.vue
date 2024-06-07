@@ -1,6 +1,10 @@
 <script setup>
+import { onMounted } from 'vue';
 const constructionGif = '/images/construction.gif';
 
+onMounted(() => {
+    document.title = 'Julius Buller | Projects'
+})
 </script>
 
 <template>
