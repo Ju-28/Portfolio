@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-// import TypeIt from "typeit";
+import { onMounted } from 'vue'
 import ContactForm from '@/components/ContactForm.vue';
 
 const showForm = ref(true);
@@ -28,6 +28,9 @@ const blackAndWhiteImageSrc = '/images/julius_buller_bw.jpg';
 //     .go();
 // })
 
+onMounted(() => {
+  document.title = 'Julius Buller | Home'
+})
 
 function formScroll() {
   if (contactWrapperRef.value) {
@@ -78,8 +81,8 @@ const showSocials = () => {
       <div class="story">
         I am a fullstack software engineer spezialized in building and designing outstanding digital experiences.
         Currently,
-        I am working on my bachelor thesis at <span class="highlighted">42DIGITAL</span> while also creating a <span
-          class="highlighted">soon TBA
+        I am working at <span class="highlighted">42DIGITAL</span> as a Fullstack & Data Engineer while also creating a
+        <span class="highlighted">soon TBA
           SaaS</span>
         solution in the fields of networking, data and events.
       </div>

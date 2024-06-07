@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { onMounted } from 'vue';
 // const pdfPath_42DIGITAL = import.meta.env.BASE_URL + './downloads/Julius_Buller_Reference_42DIGITAL.pdf';
 const pdfPath_GreenPocket = import.meta.env.BASE_URL + './downloads/Julius_Buller_Reference_GreenPocket.pdf';
 
@@ -7,6 +8,10 @@ const masterRef = ref(null);
 const bachelorRef = ref(null)
 const greenPocketRef = ref(null)
 const workingStudentRef = ref(null)
+
+onMounted(() => {
+  document.title = 'Julius Buller | Experience'
+})
 
 function workingStudentScroll() {
   if (workingStudentRef.value) {
@@ -43,11 +48,11 @@ const unsetHovered = () => {
           </h2>
           <div class="about-me-h-line"></div>
         </div>
-        <h2 class="experience-sub">Fullstack Engineer @42DIGITAL</h2>
+        <h2 class="experience-sub">Fullstack & Data Engineer @42DIGITAL</h2>
         <div class="experience-intro">
           Since starting my bachelor's program, I've been able to work in various positions, allowing me to gain a wide
           variety of
-          usefull skills. From <span class="highlighted">data engineering</span> to <span class="highlighted">front-end
+          usefull skills. From <span class="highlighted">data engineering</span> to <span class="highlighted">frontend
             development and UI/UX design</span>, each role enabled me to expand
           my skillset and deepen my understanding for digital solutions.
         </div>
@@ -71,7 +76,7 @@ const unsetHovered = () => {
               <p>Working Student</p>
             </div>
             <p class="experience-info">In the time between finishing my bachelor's program and starting my master's
-              program, I was already given more responsibilities while working @42DIGITAL. During this time I was
+              program, I was already given more responsibilities while working at 42DIGITAL. During this time I was
               simultaneously working on further
               developing a customer center and creating individual software solutions that helped B2B customers to
               optimize their workflows, while also managing customer relations.</p>
@@ -145,12 +150,16 @@ const unsetHovered = () => {
               forecasting model
               through parameter tuning. This experience, coupled with some of the courses I attended, gave me the
               opportunity
-              to deepen my knowledge in the areas of ETL, Data Science, and Strategy. </p>
+              to deepen my knowledge in the areas of ETL, Data Science and Strategy. </p>
             <div class="technologies">
               <span class="technology">Python</span>
+              <span class="technology">Matplotlib</span>
+              <span class="technology">Pandas</span>
               <span class="technology">XGBoost</span>
               <span class="technology">Jupyter</span>
               <span class="technology">Git</span>
+              <span class="technology">Jira</span>
+
             </div>
           </div>
         </div>
@@ -175,9 +184,9 @@ const unsetHovered = () => {
             <p class="experience-info">At my first job in the IT industry, I began as a working student at 42DIGITAL,
               where I supported the daily work of the Data & AI team. I was responsible for numerous ETL processes,
               cloud
-              functions and integrations, as well as data visualization for B2B clients to help them understand their
+              functions and integrations, as well as data visualizations for B2B clients to help them understand their
               metrics. Here, I gained initial experience
-              with Google Cloud and its functions, while also learning to create efficient SQL queries and data
+              with Google Cloud and its functionalities, while also learning to create efficient SQL queries and data
               pipelines.
             </p>
             <div class="technologies">
