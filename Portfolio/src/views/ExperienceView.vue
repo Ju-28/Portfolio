@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { onMounted } from 'vue';
-// const pdfPath_42DIGITAL = import.meta.env.BASE_URL + './downloads/Julius_Buller_Reference_42DIGITAL.pdf';
+const pdfPath_42DIGITAL = import.meta.env.BASE_URL + './downloads/Julius_Buller_Reference_42DIGITAL.pdf';
 const pdfPath_GreenPocket = import.meta.env.BASE_URL + './downloads/Julius_Buller_Reference_GreenPocket.pdf';
 
 const masterRef = ref(null);
@@ -66,12 +66,11 @@ const unsetHovered = () => {
           <div class="experience-content">
             <div class="experience-header">
               <span class="experience-position">Fullstack & Data Engineer · 42DIGITAL
-                <!-- <a class="pdf-reference"
-                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
-                <span class="material-symbols-rounded">
-                  article_shortcut
-                </span>
-                 </a> -->
+                <a class="pdf-reference" :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
+                  <span class="material-symbols-rounded">
+                    article_shortcut
+                  </span>
+                </a>
               </span>
               <p>Working Student</p>
             </div>
@@ -100,12 +99,11 @@ const unsetHovered = () => {
           <div class="experience-content">
             <div class="experience-header">
               <span class="experience-position">Fullstack Engineer · 42DIGITAL
-                <!-- <a class="pdf-reference"
-                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
-                <span class="material-symbols-rounded">
-                  article_shortcut
-                </span>
-                 </a> -->
+                <a class="pdf-reference" :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
+                  <span class="material-symbols-rounded">
+                    article_shortcut
+                  </span>
+                </a>
               </span>
               <p>Bachelor Thesis</p>
             </div>
@@ -172,12 +170,11 @@ const unsetHovered = () => {
           <div class="experience-content">
             <div class="experience-header">
               <span class="experience-position">Data Engineer · 42DIGITAL
-                <!-- <a class="pdf-reference"
-                  :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
-                <span class="material-symbols-rounded">
-                  article_shortcut
-                </span>
-                 </a> -->
+                <a class="pdf-reference" :href="pdfPath_42DIGITAL" download="Reference_42DIGITAL.pdf">
+                  <span class="material-symbols-rounded">
+                    article_shortcut
+                  </span>
+                </a>
               </span>
               <p>Working Student</p>
             </div>
