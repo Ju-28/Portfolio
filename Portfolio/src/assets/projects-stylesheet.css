@@ -1,0 +1,37 @@
+.project-link {
+  all: unset;
+  color: #63fff7;
+  cursor: pointer;
+}
+
+.project-link svg {
+  transform: translateY(4px);
+  fill: #63fff7;
+}
+
+.project-link:hover {
+  text-shadow: 0 0 4px #63fff7;
+  text-decoration: underline;
+}
+
+.project-image {
+  width: 100px;
+  height: 100px;
+}
+
+.project-image.reload {
+  width: 100px;
+  height: 70px;
+}
+
+@media screen and (max-width: 650px) {
+  .project-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-image.reload {
+    width: 40px;
+    height: 30px;
+  }
+}
