@@ -72,13 +72,14 @@ const unsetHovered = () => {
                   </span>
                 </a>
               </span>
-              <p>Working Student</p>
+              <p>Fulltime</p>
             </div>
             <p class="experience-info">In the time between finishing my bachelor's program and starting my master's
               program, I was already given more responsibilities while working at 42DIGITAL. During this time I was
               simultaneously working on further
               developing a customer center and creating individual software solutions that helped B2B customers to
-              optimize their workflows, while also managing customer relations.</p>
+              optimize their workflows by 10% in working hours, while also managing customer relations. Handling these
+              tasks, I generated a monthly four-digit growth in revenue</p>
             <div class="technologies">
               <span class="technology">JavaScript</span>
               <span class="technology">HTML</span>
@@ -109,7 +110,8 @@ const unsetHovered = () => {
             </div>
             <p class="experience-info">During my bachelor thesis at 42DIGITAL, I was in charge of creating a customer
               center from scratch, which
-              would help to manage clients, generate new revenue streams and lay the foundation of a new product line.
+              would help to manage clients, generate new revenue streams and lay the foundation of a new business
+              branch.
               Some of the key features are 24/7 personal dashboard access, an alert manager for custom metrics and
               providing
               several AI-powered applications.</p>
@@ -143,15 +145,18 @@ const unsetHovered = () => {
             </div>
             <p class="experience-info">As part of my bachelor's program, I completed a 6-month internship.
               During this time, my work within the scope of the 'Baseline-Generator'-Project was able to predict
-              six-figure
-              saving amounts for the company's clients and demonstrably improve the performance of the utilized
-              forecasting model
-              through parameter tuning. This experience, coupled with some of the courses I attended, gave me the
+              more than 300.000€ in
+              saving for the company's clients and demonstrably improve the performance of the utilized
+              forecasting model's precision
+              through parameter tuning by 12%. Additionally I used ETL-processes to optimize the usage of client data
+              and therefore making workflows about 5% faster. This experience, coupled with some of the courses I
+              attended, gave me the
               opportunity
               to deepen my knowledge in the areas of ETL, Data Science and Strategy. </p>
             <div class="technologies">
               <span class="technology">Python</span>
               <span class="technology">Matplotlib</span>
+              <span class="technology">Plotly</span>
               <span class="technology">Pandas</span>
               <span class="technology">XGBoost</span>
               <span class="technology">Jupyter</span>
