@@ -4,12 +4,6 @@
   cursor: pointer;
 }
 
-.project-link.hivent {
-  color: grey;
-  text-decoration: none;
-  pointer-events: none;
-}
-
 .project-link svg {
   transform: translateY(4px);
   fill: #63fff7;
