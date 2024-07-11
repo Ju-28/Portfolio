@@ -1,5 +1,5 @@
 # Portfolio
-Personal portfolio showasing me, my work and other stuff
+Personal portfolio showcasing me, my work and other stuff
 
 This template should help get you started developing with Vue 3 in Vite.
 
