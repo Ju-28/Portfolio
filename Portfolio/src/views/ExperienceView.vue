@@ -74,12 +74,12 @@ const unsetHovered = () => {
               </span>
               <p>Fulltime</p>
             </div>
-            <p class="experience-info">In the time between finishing my bachelor's program and starting my master's
-              program, I was already given more responsibilities while working at 42DIGITAL. During this time I was
+            <p class="experience-info">Right after getting my bachelor degree, I was already given more responsibilities
+              while working at 42DIGITAL. During this time I was
               simultaneously working on further
               developing a customer center and creating individual software solutions that helped B2B customers to
               optimize their workflows by 10% in working hours, while also managing customer relations. Handling these
-              tasks, I generated a monthly four-digit growth in revenue</p>
+              tasks, I generated a monthly four-digit growth in revenue.</p>
             <div class="technologies">
               <span class="technology">JavaScript</span>
               <span class="technology">HTML</span>
@@ -143,7 +143,7 @@ const unsetHovered = () => {
                   </span></a></span>
               <p>Internship</p>
             </div>
-            <p class="experience-info">As part of my bachelor's program, I completed a 6-month internship.
+            <p class="experience-info">As part of my bachelor's program, I completed a six-month internship.
               During this time, my work within the scope of the 'Baseline-Generator'-Project was able to predict
               more than 300.000€ in
               saving for the company's clients and demonstrably improve the performance of the utilized
@@ -183,7 +183,8 @@ const unsetHovered = () => {
               </span>
               <p>Working Student</p>
             </div>
-            <p class="experience-info">At my first job in the IT industry, I began as a working student at 42DIGITAL,
+            <p class="experience-info">During my first steps in the IT industry, I began as a working student at
+              42DIGITAL,
               where I supported the daily work of the Data & AI team. I was responsible for numerous ETL processes,
               cloud
               functions and integrations, as well as data visualizations for B2B clients to help them understand their
